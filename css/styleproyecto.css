@@ -1,68 +1,126 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,700;1,100;1,200;1,300;1,400;1,600&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,700;1,100;1,200;1,300;1,400;1,600&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-@import url('https://fonts.cdnfonts.com/css/brittany-signature');
+@import url("https://fonts.cdnfonts.com/css/brittany-signature?styles=70169");
 
-/* ---- Reset ---- */
+/*! ---- Reset ---- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Variables Tipo de uente y Colores */
 :root {
   --dutch-white: #edd9b5ff;
   --isabelline: #f9f3ecff;
   --tickle-me-pink: #f584a9ff;
   --tea-rose-red: #e6b7b8ff;
   --indian-red: #dd5a60ff;
-  --Brittany-font: 'Brittany Signature', sans-serif;
+  --Brittany-font: "Brittany Signature", sans-serif;
+  --Montserrat-font: "Montserrat", sans-serif;
 }
 
-html, body {
-  font-family: "Montserrat", sans-serif;
+html {
+  font-family: var(--Montserrat-font);
+  font-size: 13px;
   background-color: var(--tea-rose-red);
+  width: 100vw;
+  height: 100vh;
 }
 
-/* ---- Header ---- */
 
-header{
+/*! ---- Header ---- */
+header {
   width: 100%;
+  height: 250px;
+  font-size: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--indian-red);
   position: fixed;
+  z-index: 1;
 }
 
-header nav ul li{
+header nav ul li {
   display: inline-block;
   list-style: none;
   margin-right: 30px;
 }
 
-header nav ul li a{
+header nav ul li a {
   text-decoration: none;
   color: white;
 }
 
 header a img {
-  width: 250px;
+  width: 19.5rem;
+}
+
+/*! ---- Main ---- */
+/** Index */
+.contenedor-index {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../img/cupcake.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.contenedor-index img {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 50px 50px;
+  opacity: 0.6;
+  width: 450px;
+}
+
+.text-index {
+  height: 250px;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-evenly;
+}
+
+.text-index h1 {
+  margin-bottom: 50px;
+}
+
+.text-index a {
+  text-decoration: none;
+  color: white;
+}
+
+.text-index a h2 {
+  border: 1px black solid;
+  background-color: var(--indian-red);
+  border-radius: 5px;
+  display: inline;
+  padding: 8px;
 }
 
 
-
-/* ---- Main ---- */
-
-main .hero{
-  width:100% ;
+/** ---- Inicio ---- */
+.hero {
+  width: 100%;
+  height: 100vh;
   background-image: url(../img/Postrefrutilla.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
-  min-height: 100vh;
 }
 
-main .info-inicio{
+.info-inicio {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,32 +128,33 @@ main .info-inicio{
   padding: 35px;
 }
 
-main .info-inicio img{
+.info-inicio img {
   width: 20%;
-  height: 35%;
+  height: 25%;
 }
 
-main .info-inicio div{
+.info-inicio div {
   width: 50%;
   padding: 35px;
 }
-main .info-inicio div h2{
+
+.info-inicio div h2 {
   text-align: center;
   margin-bottom: 35px;
 }
 
-main .info-inicio div p{
-  text-indent: 35px
+.info-inicio div p {
+  text-indent: 35px;
 }
 
-main .prom-cont{
+.prom-cont {
   margin: 0 100px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
-main .prom-cont div{
+.prom-cont div {
   width: 20%;
   display: flex;
   justify-content: center;
@@ -104,62 +163,535 @@ main .prom-cont div{
   text-align: center;
 }
 
-main .productos h2{
+/** ---- Productos ---- */
+.productos h2 {
   text-align: center;
   margin: 60px 0px;
 }
 
-main .productos .cards-productos{
+.productos .cards-productos {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-main .productos .cards-productos .card{
+.productos .cards-productos .card {
   width: 250px;
   height: 300px;
   background-color: aquamarine;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
 }
 
+.productos .cards-productos .card h5 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  font-size: 30px;
+  color: var(--indian-red);
+  text-shadow: 1px 1px 1px black;
+}
 
-main .fij-whatapp{
+.productos .cards-productos .card img {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6))
+}
+
+h2 {
+  text-align: center;
+  margin: 35px auto;
+  margin-top: 60px;
+  font-size: 40px;
+}
+
+/* Galeria Grid Productos */
+
+.galeria-productos {
+  width: 90%;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 350px;
+  gap: 10px;
+}
+
+.gal-item {
+  border: 1px black solid;
+  border-radius: 10px;
+  box-shadow: 8px 8px 25px black;
+}
+
+.gal-item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Galeria Chocolateria */
+.item-choco-2 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.item-choco-6 {
+  grid-column: span 2;
+}
+
+/* Galeria Pasteleria */
+.item-past-2 {
+  grid-row: span 2;
+}
+
+.item-past-3 {
+  grid-column: span 2;
+}
+
+.item-past-5 {
+  grid-column: span 2;
+}
+
+/* Galeria Mesa */
+.item-mesa-5 {
+  grid-column: span 2;
+}
+
+.item-mesa-4 {
+  grid-row: span 2;
+}
+
+.item-mesa-8 {
+  grid-column: span 2;
+}
+
+/**  Contacto */
+/* Section Ubicacion e info*/
+
+.ubicacion {
+  width: 80%;
+  height: 300px;
+  margin: auto;
+  display: flex;
+}
+
+.ubicacion .mapa {
+  width: 50%;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.ubicacion .mapa iframe {
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px var(--indian-red);
+}
+
+.ubicacion .info-contacto {
+  width: 50%;
+  padding: 30px;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+}
+
+.ubicacion .info-contacto .info-contacto-dato {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.ubicacion .info-contacto .info-contacto-dato img {
+  width: 35px;
+  height: 35px;
+}
+
+/* Section Datos y consulta*/
+.contacto {
+  width: 80%;
+  height: 300px;
+  margin: auto;
+  margin-bottom: 50px;
+  display: flex;
+}
+
+.contacto .datos-personales {
+  width: 50%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.contacto .datos-personales input {
+  width: 80%;
+  height: 30px;
+  margin: auto;
+  margin-bottom: 3%;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px var(--indian-red);
+}
+
+.contacto .datos-personales label {
+  padding-left: 10%;
+  font-size: 1.1rem;
+}
+
+.contacto .datos-consulta {
+  width: 50%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contacto .datos-consulta textarea {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 3%;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px var(--indian-red);
+}
+
+.contacto .datos-consulta label {
+  padding-left: 5%;
+  margin-bottom: 1%;
+  font-size: 1.1rem;
+}
+
+.contacto .datos-consulta button {
+  width: 50%;
+  margin: auto;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  padding: 2%;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px var(--indian-red);
+}
+
+/** ---- WhatApp Fijo ---- */
+
+.fij-whatapp {
   position: fixed;
-  bottom: 90px;
-  right: 90px;
+  bottom: 120px;
+  right: 50px;
 }
 
-main .fij-whatapp img{
+.fij-whatapp img {
   width: 50px;
 }
 
+/*! ---- Footer ---- */
 
-
-/* ---- Footer ---- */
-
-footer{
+footer {
+  height: 100px;
+  width: 100%;
+  padding: 5px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 20px 100px;
-  margin-top: 60px;
+  background-color: var(--indian-red);
 }
 
-footer h2{
-  font-family: var(--Brittany-font);
-  font-size: 36px;
-}
-
-footer .redes img{
-  width: 30px;
-  margin: 0 10px;
-}
-
-footer .copy{
+.marca {
+  width: 35%;
+  height: 85%;
+  padding: 3px; 
   display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--Brittany-font);
 }
 
-footer .copy img{
-  width: 20px;
-  height: 20px;
-  margin: 0 10px;
+.redes {
+  width: 30%;
+  height: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.redes a {
+  margin-right: 3rem;
+}
+
+.redes a img{
+  width: 30px;
+}
+
+.copy {
+  width: 35%;
+  height: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copy img{
+  width: 30px;
+}
+
+/* -------  MEDIA_QUERYS  -------- */
+
+/*! Media_Query 950px */
+@media screen and (max-width: 950px) {
+  /** Contacto */
+
+  html {
+    font-size: 10px;
+  }
+
+
+}
+
+/*! Media_Query 750px */
+@media screen and (max-width: 750px) {
+
+  /** Productos */
+  .cards-productos {
+    flex-direction: column;
+  }
+
+  .cards-productos .card {
+    margin-bottom: 4rem;
+  }
+
+  .galeria-productos {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 18rem;
+    gap: 10px;
+  }
+
+  .item-choco-1 {
+    grid-row: span 3;
+  }
+
+  .item-choco-9 {
+    grid-column: span 2;
+  }
+
+  .item-past-1 {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .item-past-4 {
+    grid-row: span 2;
+  }
+
+  .item-past-6 {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .item-past-8 {
+    grid-row: span 2;
+  }
+
+  .item-past-9 {
+    grid-column: span 2;
+  }
+
+  /** Contacto */
+  .ubicacion {
+    height: auto;
+    flex-direction: column-reverse;
+  }
+
+  .contacto {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .contacto .datos-consulta {
+    width: 100%;
+    margin: auto;
+  }
+
+  .contacto .datos-consulta textarea {
+    width: 100%;
+  }
+
+  .contacto .datos-consulta label {
+    padding-left: 0;
+    font-size: 1.75rem;
+  }
+
+  .contacto .datos-consulta button {
+    width: 70%;
+    font-size: 1.5rem;
+  }
+
+  .contacto .datos-personales {
+    width: 100%;
+    margin: auto;
+  }
+
+  .contacto .datos-personales input {
+    width: 100%;
+  }
+
+  .contacto .datos-personales label {
+    padding-left: 0;
+    font-size: 1.75rem;
+  }
+
+  .ubicacion .mapa {
+    width: 90%;
+    margin: auto;
+  }
+
+  .ubicacion .info-contacto {
+    width: 90%;
+    margin: auto;
+  }
+
+  .ubicacion .info-contacto-dato {
+    margin-bottom: 3%;
+  }
+
+  footer {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 1.2rem;
+    gap: 2rem;
+    font-size: 1.2rem;
+  }
+
+  footer .copy {
+    margin-top: 2%;
+    align-items: center;
+  }
+
+  footer h2 {
+    font-size: 3.1rem;
+  }
+
+}
+
+/*! Media_Query 645px */
+@media screen and (max-width: 645px) {
+
+  header {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.75rem;
+  }
+
+  header nav ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  header a {
+    order: -1;
+  }
+
+.info-inicio {
+  margin: auto;
+  flex-direction: column-reverse;
+  width: 100%;
+  background-color: lightcoral;
+}
+
+.info-inicio div {
+  width: 95%;
+}
+
+.info-inicio div h2 {
+  font-size: 3rem;
+  text-align: center;
+  width: 80%;
+}
+
+.info-inicio div p {
+  width: 95%;
+  margin: auto;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.prom-cont {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.prom-cont div{
+  margin: auto;
+  width: 90%;
+}
+
+  /** Productos */
+
+  .galeria-productos {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 18rem;
+    gap: 10px;
+  }
+
+.gal-item{
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.item-past-9{
+  grid-column: span 2;
+}
+
+.item-mesa-9{
+  grid-column: span 2;
+}
+
+}
+
+/*! Media_Query 450px */
+@media screen and (max-width: 450px) {
+
+  .fij-whatapp {
+    visibility: hidden;
+  }
+
+  /** Productos */
+  .productos h2 {
+    font-size: 2.75rem;
+    text-align: justify;
+  }
+
+  .galeria-productos {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 18rem;
+  }
+  
+  .gal-item {
+    margin: auto;
+    width: 60%;
+    height: 100%;
+    grid-column: span 1;
+  }
+
+  main h2 {
+    font-size: 2.5rem;
+  }
+
+
+}
+
+
+/* ---  fin media Query --- */

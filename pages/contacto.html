@@ -1,46 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dolce Verónica</title>
-    <link rel="stylesheet" href="../css/styleproyecto.css" />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="../pages/inicio.html">Inicio</a></li>
-          <li><a href="../pages/quienessomos.html">Quienes Somos</a></li>
-        </ul>
-      </nav>
-      <a href="../index.html"><img src="../img/DolceVerónicaBlanca.png" alt="logo dolce verónica" /></a>
-      <nav>
-        <ul>
-          <li><a href="../pages/productos.html">Productos</a></li>
-          <li><a href="../pages/contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section class="hero"></section>
-      <div class="fij-whatapp">
-        <img src="../img/whatsappnvocolor.png" alt="logo whatsapp" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dolce Verónica</title>
+  <link rel="stylesheet" href="../css/styleproyecto.css" />
+</head>
+
+<body>
+  <header>
+    <nav >
+      <ul>
+        <li><a href="../pages/inicio.html">Inicio</a></li>
+        <li><a href="./quienessomos.html">Quienes Somos</a></li>
+      </ul>
+    </nav>
+    <a href="./inicio.html"><img src="../img/DolceVerónicalb.png" alt="logo dolce verónica" /></a>
+    <nav>
+      <ul>
+        <li><a href="./productos.html">Productos</a></li>
+        <li><a href="./contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+    </section>
+    <section class="ubicacion">
+      <div class="mapa">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1702.8913121497817!2d-64.18268656142588!3d-31.39255680398308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943298686789d1f5%3A0x8cf972534fc3ba8b!2sJujuy%202080%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1688771679269!5m2!1ses-419!2sar"
+          width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-    </main>
-    <footer>
-      <h2>Dolce Véronica</h2>
-      <div class="redes">
-        <img src="../img/facebooklinea.png" alt="logo facebook" />
-        <img src="../img/instagramlinea.png" alt="logo instagram" />
+      <div class="info-contacto">
+        <div class="info-contacto-dato">
+          <img src="../img/telefono.png" alt="telefono" />
+          <h4>
+            0351-154895796
+          </h4>
+        </div>
+        <div class="info-contacto-dato">
+          <img src="../img/email.png" alt="email" />
+          <h4>
+            dolceveronica@gmail.com
+          </h4>
+        </div>
+        <div class="info-contacto-dato">
+          <img src="../img/ubicacion.png" alt="ubicacion" />
+          <h4>
+            Jujuy N° 2080, Alta Córdoba, Cordoba, Argentina.-
+          </h4>
+        </div>
       </div>
-      <div class="copy">
-        <img src="../img/derechos-de-autor.png" alt="copyright" />
-        <h3>
-           1983 - 2023  Córdoba, Argentina
-        </h3>
+    </section>
+    <section class="contacto">
+      <div class="datos-personales">
+        <label for="nombre">Nombre</label>
+        <input type="text">
+        <label for="nombre">Apellido</label>
+        <input type="text">
+        <label for="nombre">Telefono</label>
+        <input type="number">
+        <label for="nombre">E-mail</label>
+        <input type="email">
       </div>
-      </footer>
-  </body>
+      <div class="datos-consulta">
+        <label for="nombre">Consulta</label>
+        <textarea type="text" cols="40" rows="12" placeholder="Ingresa tu Consulta"></textarea>
+        <button type="button">Enviar</button>
+      </div>
+    </section>
+    <div class="fij-whatapp">
+      <img src="../img/whatsappnvocolor.png" alt="logo whatsapp" />
+    </div>
+  </main>
+  <footer>
+    <div class="marca">
+    <h2>Dolce Veronica</h2>
+    </div>
+    <div class="redes">
+      <a href=""><img src="../img/facebookdraw.png" alt="logo facebook" /></a>
+      <a href=""><img src="../img/instagramdraw.png" alt="logo instagram" /></a>
+      <a href=""><img src="../img/gorjeo.png" alt="logo twiter" /></a>
+    </div>
+    <div class="copy">
+      <img src="../img/derechos-de-autor.png" alt="copyright" />
+      <h3>
+        1983 - 2023 Córdoba, Argentina
+      </h3>
+    </div>
+  </footer>
+</body>
+
 </html>
