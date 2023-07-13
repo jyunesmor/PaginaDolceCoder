@@ -6,6 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dolce Verónica</title>
+  <!--BOOTSTRAP 5.3-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <!--CSS-->
   <link rel="stylesheet" href="../css/styleproyecto.css" />
 </head>
 
@@ -27,52 +31,65 @@
   </header>
   <main>
     <section class="hero"></section>
-    <section class="info-inicio">
-      <img src="../img/cupcake1redi.jpg" alt="">
-      <div>
-        <h2>Pasteleria de Autor</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus rerum explicabo asperiores odit inventore
-          non architecto modi! Facere, enim voluptate accusamus nesciunt voluptatibus commodi laudantium officiis alias
-          earum suscipit! A.
-          Itaque incidunt ab maxime exercitationem aliquid numquam sapiente explicabo, fugiat unde reiciendis laboriosam
-          vel et est quod odit, veniam illum consequuntur. Dicta laboriosam odio cupiditate eveniet quia quaerat, natus
-          modi.</p>
+    <section class="container">
+      <div class="row m-5 p-3">
+        <div class="col-sm-12 col-lg-4 d-flex justify-content-center align-items-center">
+          <img src="../img/cupcake1redi.jpg" alt="">
+        </div>
+        <div
+          class="col-sm-12 col-lg-8 p-5 d-flex flex-column justify-content-center align-items-center  order-first order-sm-first order-md-first order-lg-last ">
+          <h2>Pasteleria de Autor</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus rerum explicabo asperiores odit inventore
+            non architecto modi! Facere, enim voluptate accusamus nesciunt voluptatibus commodi laudantium officiis
+            alias
+            earum suscipit! A.
+            Itaque incidunt ab maxime exercitationem aliquid numquam sapiente explicabo, fugiat unde reiciendis
+            laboriosam
+            vel et est quod odit, veniam illum consequuntur. Dicta laboriosam odio cupiditate eveniet quia quaerat,
+            natus
+            modi.</p>
+        </div>
       </div>
     </section>
-    <section class="prom-cont">
-      <div>
-        <h2>DESCUENTO POR PAGO EN EFECTIVO</h2>
-        <p>Todos los dias 10% de descuento por pago en efectivo en el local.</p>
-      </div>
-      <div>
-        <h2>PAGÁ COMO QUIERAS</h2>
-        <p>Aceptamos Mercadopago, Tarjetas de Crédito y Efectivo.</p>
-      </div>
-      <div>
-        <h2>CONSULTANOS EL STOCK</h2>
-        <p>Tenemos productos disponibles en el local.</p>
-      </div>
+    <section class="container">
+      <div class="row m-3 d-flex justify-content-evenly align-items-center flex-wrap">
+        <div class="col-lg-4 col-md-4 col-sm-12 caja-prom d-flex flex-column justify-content-center align-items-center">
+          <h3 class="m-auto text-center">DESCUENTO PAGO EN EFECTIVO</h3>
+          <p class="m-auto text-center bg-ligth">Todos los dias 10% de descuento por pago en efectivo en el local.</p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 caja-prom d-flex flex-column justify-content-center align-items-center">
+          <h3 class="m-auto text-center">ABONA CON CUALQUIER MEDIO DE PAGO</h3>
+          <p class="m-auto text-center">Aceptamos Mercadopago, Tarjetas de Crédito y Efectivo.</p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 caja-prom d-flex flex-column justify-content-evenly align-items-center">
+          <h3 class="text-center m-auto">CONSULTANOS <br> EL STOCK</h3>
+          <p class="text-center m-auto">Tenemos productos disponibles en el local.</p>
+        </div>
     </section>
     <div class="fij-whatapp">
       <img src="../img/whatsappnvocolor.png" alt="logo whatsapp" />
     </div>
   </main>
-  <footer>
-    <div class="marca">
+  <footer class="d-flex justify-content-evenly align-items-center h-auto">
+    <div class="text-boot">
       <h2>Dolce Veronica</h2>
     </div>
-    <div class="redes">
-      <a href=""><img src="../img/facebookdraw.png" alt="logo facebook" /></a>
-      <a href=""><img src="../img/instagramdraw.png" alt="logo instagram" /></a>
-      <a href=""><img src="../img/gorjeo.png" alt="logo twiter" /></a>
+    <div class="redes-boot">
+      <a href=""><img class="m-4" src="../img/facebookdraw.png" alt="logo facebook" /></a>
+      <a href=""><img class="m-4" src="../img/instagramdraw.png" alt="logo instagram" /></a>
+      <a href=""><img class="m-4" src="../img/gorjeo.png" alt="logo twiter" /></a>
     </div>
-    <div class="copy">
-      <img src="../img/derechos-de-autor.png" alt="copyright" />
+    <div class="d-flex p-2 align-items-center copy-boot">
+      <img class="m-3" src="../img/derechos-de-autor.png" alt="copyright" />
       <h3>
         1983 - 2023 Córdoba, Argentina
       </h3>
     </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
