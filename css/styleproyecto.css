@@ -23,45 +23,49 @@
 html {
   font-family: var(--Montserrat-font);
   font-size: 13px;
-  background: none;
 }
 
+body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+}
 
 /*! ---- Header ---- */
+/**Header armado con Bootstrap*/
 header {
-  width: 100%;
-  height: 250px;
-  font-size: 1.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  grid-area: header;
   background-color: var(--indian-red);
+  width: 100%;
+  height: auto;
   position: fixed;
   z-index: 1;
 }
 
-header nav ul li {
-  display: inline-block;
-  list-style: none;
+.container img {
+  width: 250px;
+  height: 250px;
 }
 
-header nav ul li a {
-  text-decoration: none;
-  color: white;
-  margin-left: 25px;
-  margin-right: 25px;
+header nav div ul li {
+  font-size: 1.3rem;
 }
 
-header nav ul li a:hover {
+header nav div ul li a:hover {
   border-bottom: 3px solid black;
   padding-bottom: 2px;
-}
-
-header a img {
-  width: 19.5rem;
+  color: aqua !important;
 }
 
 /*! ---- Main ---- */
+
+main{
+  grid-area: main;
+}
+
 /** Index */
 .contenedor-index {
   width: 100%;
@@ -112,7 +116,6 @@ header a img {
   padding: 8px;
 }
 
-
 /** ---- Inicio ---- */
 .hero {
   width: 100%;
@@ -124,23 +127,26 @@ header a img {
   background-attachment: fixed;
 }
 
-.container img {
-  width: 300px;
-  height: 300px;
-}
-
 .caja-prom {
   width: 300px;
   height: 150px;
 }
 
 /** ---- Productos ---- */
+
+.productos{
+  width: 100%;
+  margin: 60px auto;
+}
+
 .productos h2 {
   text-align: center;
-  margin: 60px 0px;
+
 }
 
 .productos .cards-productos {
+  width: 100%;
+  padding: 60px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -149,39 +155,40 @@ header a img {
 .productos .cards-productos .card {
   width: 250px;
   height: 300px;
-  background-color: aquamarine;
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
+  border-radius: 15px;
+  background: linear-gradient(90deg,var(--indian-red) 0%, rgba(247,161,149,1) 2%, rgba(255,255,255,1) 100%);
 }
 
 .productos .cards-productos .card h5 {
   position: absolute;
-  right: 0;
+  left: 0;
   bottom: 0;
-  padding: 10px;
+  transform: rotate(0deg);
+  translate: 65px -5px;
   font-size: 30px;
   color: var(--indian-red);
-  text-shadow: 1px 1px 1px black;
+  text-shadow: 2px 2px 1px black;
 }
 
 .productos .cards-productos .card img {
   width: 100%;
-  height: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6))
+  height: 300px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 25px black;
 }
 
 h2 {
   text-align: center;
-  margin: 35px auto;
-  margin-top: 60px;
+  margin: 0 auto 15px auto;
   font-size: 40px;
 }
+
 
 /* Galeria Grid Productos */
 
 .galeria-productos {
-  width: 90%;
+  width: 95%;
   margin: 30px auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -360,60 +367,13 @@ h2 {
   width: 50px;
 }
 
-/*! ---- Footer ---- */
-
-.footer {
-  height: 100px;
-  width: 100%;
-  padding: 5px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: var(--indian-red);
-}
-
-.marca {
-  width: 35%;
-  height: 85%;
-  padding: 3px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: var(--Brittany-font);
-}
-
-.redes {
-  width: 30%;
-  height: 85%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.redes a {
-  margin-right: 3rem;
-}
-
-.redes a img {
-  width: 30px;
-}
-
-.copy {
-  width: 35%;
-  height: 85%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.copy img {
-  width: 30px;
-}
-
-
-/** ---- BOOSTRAP FOOTER---- */
+/*! ---- FOOTER ---- */
+/**Footer armado con Bootstrap*/
 
 footer {
+  grid-area: footer;
+  height: 100px;
+  width: 100%;
   background-color: var(--indian-red);
 }
 
@@ -430,35 +390,37 @@ footer div img {
   filter: drop-shadow(2px 2px 1px whitesmoke);
 }
 
-.redes-boot {}
-
 .copy-boot h3 {
   font-size: 1.25rem;
 }
+
 
 /* -------  MEDIA_QUERYS  -------- */
 
 /*! Media_Query 950px */
 @media screen and (max-width: 950px) {
   /** Contacto */
-
   html {
     font-size: 10px;
   }
-
-
 }
 
 /*! Media_Query 750px */
 @media screen and (max-width: 750px) {
 
   /** Productos */
+.productos{
+    height: auto;
+}
+
   .cards-productos {
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 3rem;
+    height: auto;
   }
 
-  .cards-productos .card {
-    margin-bottom: 4rem;
+  .cards-productos .card{
+    row-gap: 2.5rem;
   }
 
   .galeria-productos {
@@ -555,49 +517,10 @@ footer div img {
     margin-bottom: 3%;
   }
 
-  footer {
-    width: 100%;
-    height: 150px;
-    flex-direction: column;
-    padding: 1.2rem;
-    gap: 2rem;
-    font-size: 1.2rem;
-  }
-
-  footer .copy {
-    margin-top: 2%;
-    align-items: center;
-  }
-
-  footer h2 {
-    font-size: 3.1rem;
-  }
-
 }
 
 /*! Media_Query 645px */
 @media screen and (max-width: 645px) {
-
-  header {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    font-size: 1.75rem;
-  }
-
-  header nav ul li {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-
-  header a {
-    order: -1;
-  }
-
-
 
   /** Productos */
 
@@ -625,29 +548,38 @@ footer div img {
 @media screen and (max-width: 450px) {
 
   .hero {
-    visibility: hidden;
-    width: 100%;
-    height: 2px;
+    display: none;
   }
 
   .fij-whatapp {
-    visibility: hidden;
+    display: none;
   }
 
+  .text-boot {
+  font-family: var(--Brittany-font);
+  font-style: italic;
+  font-size: 1rem;
+}
+
   /** Productos */
+  .productos {
+    margin-top: 210px;
+  }
+
   .productos h2 {
     font-size: 2.75rem;
-    text-align: justify;
+    text-align: center;
   }
 
   .galeria-productos {
+    width: 95%;
     grid-template-columns: 1fr;
     grid-auto-rows: 18rem;
   }
 
   .gal-item {
     margin: auto;
-    width: 60%;
+    width: 80%;
     height: 100%;
     grid-column: span 1;
   }
@@ -656,8 +588,15 @@ footer div img {
     font-size: 2.5rem;
   }
 
+  /** Contacto */
+  .ubicacion {
+    margin-top: 350px;
+  }
 
+  /** Inicio */
+  .cont-inicio {
+    margin-top: 250px;
+  }
 }
-
 
 /* ---  fin media Query --- */

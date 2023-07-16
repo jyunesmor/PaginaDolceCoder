@@ -12,26 +12,41 @@
   <!--CSS-->
   <link rel="stylesheet" href="../css/styleproyecto.css" />
 </head>
-
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="../pages/inicio.html">Inicio</a></li>
-        <li><a href="./quienessomos.html">Quienes Somos</a></li>
-      </ul>
-    </nav>
-    <a href="./inicio.html"><img src="../img/DolceVerónicalb.png" alt="logo dolce verónica" /></a>
-    <nav>
-      <ul>
-        <li><a href="./productos.html">Productos</a></li>
-        <li><a href="./contacto.html">Contacto</a></li>
-      </ul>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container justify-content-lg-center justify-content-md-evenly">
+        <a class="navbar-brand d-lg-none ml-5" href="../pages/inicio.html"><img src="../img/DolceVerónicalb.png" alt="logo dolce veronica"/></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/inicio.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./quienessomos.html">Quienes Somos</a>
+            </li>
+          </ul>
+          <a class="navbar-brand d-none d-lg-block" href="../pages/inicio.html"><img src="../img/DolceVerónicalb.png"
+              alt="logo dolce verónica" /></a>
+          <ul class="navbar-nav ml-5">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./productos.html">Productos</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
   <main>
     <section class="hero"></section>
-    <section class="container">
+    <section class="container cont-inicio">
       <div class="row m-5 p-3">
         <div class="col-sm-12 col-lg-4 d-flex justify-content-center align-items-center">
           <img src="../img/cupcake1redi.jpg" alt="">
@@ -75,9 +90,11 @@
       <h2>Dolce Veronica</h2>
     </div>
     <div class="redes-boot">
-      <a href=""><img class="m-4" src="../img/facebookdraw.png" alt="logo facebook" /></a>
-      <a href=""><img class="m-4" src="../img/instagramdraw.png" alt="logo instagram" /></a>
-      <a href=""><img class="m-4" src="../img/gorjeo.png" alt="logo twiter" /></a>
+      <a href="https://www.facebook.com/profile.php?id=100009540382256" target="_blank"><img class="m-4"
+          src="../img/facebookdraw.png" alt="logo facebook" /></a>
+      <a href="https://www.instagram.com/dolceveronica1/" target="_blank"><img class="m-4"
+          src="../img/instagramdraw.png" alt="logo instagram" /></a>
+      <a href="" target="_blank"><img class="m-4" src="../img/gorjeo.png" alt="logo twiter" /></a>
     </div>
     <div class="d-flex p-2 align-items-center copy-boot">
       <img class="m-3" src="../img/derechos-de-autor.png" alt="copyright" />

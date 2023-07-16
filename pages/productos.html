@@ -6,23 +6,44 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dolce Verónica</title>
+  <!--BOOTSTRAP 5.3-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <!--CSS-->
   <link rel="stylesheet" href="../css/styleproyecto.css" />
 </head>
 
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="../pages/inicio.html">Inicio</a></li>
-        <li><a href="./quienessomos.html">Quienes Somos</a></li>
-      </ul>
-    </nav>
-    <a href="./inicio.html"><img src="../img/DolceVerónicalb.png" alt="logo dolce verónica" /></a>
-    <nav>
-      <ul>
-        <li><a href="./productos.html">Productos</a></li>
-        <li><a href="./contacto.html">Contacto</a></li>
-      </ul>
+  <header class="">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container justify-content-lg-center justify-content-md-between">
+        <a class="navbar-brand d-lg-none ml-5" href="#"><img src="../img/DolceVerónicalb.png"
+            alt="logo dolce verónica" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-grow-0 text-align-center" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/inicio.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./quienessomos.html">Quienes Somos</a>
+            </li>
+          </ul>
+          <a class="navbar-brand d-none d-lg-block" href="#"><img src="../img/DolceVerónicalb.png"
+              alt="logo dolce verónica" /></a>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./productos.html">Productos</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
   <main>
@@ -32,19 +53,19 @@
       <div class="cards-productos">
         <div class="card">
           <h5>Pasteleria</h5>
-          <a><img src="../img/tortachocolate.jpg" alt=""></a>
+          <a href="#pasteleria"><img src="../img/tortachocolate.jpg" alt=""></a>
         </div>
         <div class="card">
           <h5>Chocolateria</h5>
-          <a><img src="../img/chocolateria.jpg" alt=""></a>
+          <a href="#chocolateria"><img src="../img/chocolateria.jpg" alt=""></a>
         </div>
         <div class="card">
           <h5>Mesa Dulce</h5>
-          <a><img src="../img/mesaDulceLink.jpg" alt=""></a>
+          <a href="mesa"><img src="../img/mesaDulceLink.jpg" alt=""></a>
         </div>
       </div>
     </section>
-    <h2>Chocolateria</h2>
+    <h2 id="chocolateria">Chocolateria</h2>
     <section class="galeria-productos ">
       <div class="gal-item item-choco-1">
         <img src="../img/chocolateria-1.jpg" alt="">
@@ -71,7 +92,7 @@
         <img src="../img/chocolateria-9.jpg" alt="">
       </div>
     </section>
-    <h2>Pasteleria</h2>
+    <h2 id="pasteleria">Pasteleria</h2>
     <section class="galeria-productos">
       <div class="gal-item item-past-1">
         <img src="../img/volcandechocolate.jpg" alt="" />
@@ -101,7 +122,7 @@
         <img src="../img/tartadearandano.jpg" alt="" />
       </div>
     </section>
-    <h2>Mesas Dulces</h2>
+    <h2 id="mesa">Mesas Dulces</h2>
     <section class="galeria-productos">
       <div class="gal-item">
         <img src="../img/mesa-1.jpg" alt="" />
@@ -135,22 +156,26 @@
       <img src="../img/whatsappnvocolor.png" alt="logo whatsapp" />
     </div>
   </main>
-  <footer>
-    <div class="marca">
+  <footer class="d-flex justify-content-evenly align-items-center h-auto">
+    <div class="text-boot">
       <h2>Dolce Veronica</h2>
     </div>
-    <div class="redes">
-      <a href=""><img src="../img/facebookdraw.png" alt="logo facebook" /></a>
-      <a href=""><img src="../img/instagramdraw.png" alt="logo instagram" /></a>
-      <a href=""><img src="../img/gorjeo.png" alt="logo twiter" /></a>
+    <div class="redes-boot">
+      <a href="https://www.facebook.com/profile.php?id=100009540382256" target="_blank"><img class="m-4"
+          src="../img/facebookdraw.png" alt="logo facebook" /></a>
+      <a href="https://www.instagram.com/dolceveronica1/" target="_blank"><img class="m-4"
+          src="../img/instagramdraw.png" alt="logo instagram" /></a>
+      <a href="" target="_blank"><img class="m-4" src="../img/gorjeo.png" alt="logo twiter" /></a>
     </div>
-    <div class="copy">
-      <img src="../img/derechos-de-autor.png" alt="copyright" />
+    <div class="d-flex p-2 align-items-center copy-boot">
+      <img class="m-3" src="../img/derechos-de-autor.png" alt="copyright" />
       <h3>
         1983 - 2023 Córdoba, Argentina
       </h3>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
 </body>
-
 </html>
