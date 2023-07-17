@@ -16,38 +16,32 @@
   --tickle-me-pink: #f584a9ff;
   --tea-rose-red: #e6b7b8ff;
   --indian-red: #dd5a60ff;
+  --transparente: transparent;
   --Brittany-font: "Brittany Signature", sans-serif;
   --Montserrat-font: "Montserrat", sans-serif;
 }
 
 html {
   font-family: var(--Montserrat-font);
-  font-size: 13px;
+  font-size: 16px;
 }
 
-body {
-  display: grid;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
-  grid-template-columns: 1fr;
-}
 
 /*! ---- Header ---- */
 /**Header armado con Bootstrap*/
 header {
-  grid-area: header;
   background-color: var(--indian-red);
   width: 100%;
   height: auto;
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 1;
 }
 
 .container img {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
 }
 
 header nav div ul li {
@@ -61,10 +55,6 @@ header nav div ul li a:hover {
 }
 
 /*! ---- Main ---- */
-
-main{
-  grid-area: main;
-}
 
 /** Index */
 .contenedor-index {
@@ -370,30 +360,32 @@ h2 {
 /*! ---- FOOTER ---- */
 /**Footer armado con Bootstrap*/
 
-footer {
-  grid-area: footer;
-  height: 100px;
-  width: 100%;
+footer{
   background-color: var(--indian-red);
+  height: auto;
 }
 
-footer div img {
-  width: 30px;
-}
-
-.text-boot {
+.text-boot h2{
   font-family: var(--Brittany-font);
-  font-style: italic;
+  font-size: 2.5rem;
+  font-weight: 700;
+  filter: drop-shadow(3px 3px 1px var(--dutch-white));
 }
 
-.text-boot h2 {
-  filter: drop-shadow(2px 2px 1px whitesmoke);
+.redes-boot img{
+  width: 35px;
+  height: 35px;
 }
 
-.copy-boot h3 {
-  font-size: 1.25rem;
+.copy-boot img{
+  width: 30px;
+  height: 30px;
 }
 
+.copy-boot h3{
+  font-family: var(--Montserrat-font);
+  font-size: 1rem;
+}
 
 /* -------  MEDIA_QUERYS  -------- */
 
@@ -539,9 +531,15 @@ footer div img {
     grid-column: span 2;
   }
 
-  footer {
-    height: auto;
-  }
+footer{
+  height: auto;
+}
+
+.redes-boot img{
+  width: 25px;
+  height: 25px;
+}
+
 }
 
 /*! Media_Query 450px */
@@ -555,11 +553,6 @@ footer div img {
     display: none;
   }
 
-  .text-boot {
-  font-family: var(--Brittany-font);
-  font-style: italic;
-  font-size: 1rem;
-}
 
   /** Productos */
   .productos {
@@ -595,7 +588,7 @@ footer div img {
 
   /** Inicio */
   .cont-inicio {
-    margin-top: 250px;
+    margin-top: 350px;
   }
 }
 
