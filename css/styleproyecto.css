@@ -26,6 +26,9 @@ html {
   font-size: 16px;
 }
 
+body{
+  background-color: var(--tea-rose-red);
+}
 
 /*! ---- Header ---- */
 /**Header armado con Bootstrap*/
@@ -118,9 +121,10 @@ header nav div ul li a:hover {
 }
 
 .caja-prom {
-  width: 300px;
-  height: 150px;
+  max-width: 300px;
+  height: 200px;
 }
+
 
 /** ---- Productos ---- */
 
@@ -260,8 +264,8 @@ h2 {
 
 .ubicacion .info-contacto {
   width: 50%;
-  padding: 30px;
-  padding-left: 50px;
+  padding: 15px;
+  padding-left: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -274,6 +278,9 @@ h2 {
   gap: 30px;
 }
 
+.info-contacto-dato h4 {
+  font-size: 1.25rem ;
+}
 .ubicacion .info-contacto .info-contacto-dato img {
   width: 35px;
   height: 35px;
@@ -365,11 +372,16 @@ footer{
   height: auto;
 }
 
+footer div{
+  height: 60px;  
+  min-width: 33%;
+}
+
 .text-boot h2{
   font-family: var(--Brittany-font);
   font-size: 2.5rem;
   font-weight: 700;
-  filter: drop-shadow(3px 3px 1px var(--dutch-white));
+  filter: drop-shadow(4px 4px 1px var(--dutch-white));
 }
 
 .redes-boot img{
@@ -399,6 +411,11 @@ footer{
 
 /*! Media_Query 750px */
 @media screen and (max-width: 750px) {
+
+.caja-prom h3{
+  font-size: 2rem;
+}
+
 
   /** Productos */
 .productos{
@@ -531,6 +548,9 @@ footer{
     grid-column: span 2;
   }
 
+  .item-mesa-9 {
+    grid-column: span 2;
+  }
 footer{
   height: auto;
 }
@@ -541,6 +561,12 @@ footer{
 }
 
 }
+
+/*! Media_Query 600px */
+@media screen and (max-width: 600px) {
+
+}
+
 
 /*! Media_Query 450px */
 @media screen and (max-width: 450px) {
@@ -553,10 +579,13 @@ footer{
     display: none;
   }
 
+  .caja-prom{
+    height: auto;
+  }
 
   /** Productos */
   .productos {
-    margin-top: 210px;
+    margin-top: 250px;
   }
 
   .productos h2 {
@@ -583,12 +612,12 @@ footer{
 
   /** Contacto */
   .ubicacion {
-    margin-top: 350px;
+    margin-top: 250px;
   }
 
   /** Inicio */
   .cont-inicio {
-    margin-top: 350px;
+    margin-top: 250px;
   }
 }
 
