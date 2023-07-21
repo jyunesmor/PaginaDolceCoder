@@ -246,6 +246,7 @@ h2 {
   width: 80%;
   height: 300px;
   margin: auto;
+  margin-top: 30px;
   display: flex;
 }
 
@@ -352,6 +353,18 @@ h2 {
   box-shadow: 2px 2px 10px var(--indian-red);
 }
 
+/** ---- Quienes Somos ---- */
+
+.sec-carousel{
+  background: lavenderblush;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+.sec-carousel img{
+  object-fit: cover;
+  height: 450px;
+}
+
 /** ---- WhatApp Fijo ---- */
 
 .fij-whatapp {
@@ -405,12 +418,15 @@ footer div{
 @media screen and (max-width: 950px) {
   /** Contacto */
   html {
-    font-size: 10px;
+    font-size: 14px;
   }
 }
 
 /*! Media_Query 750px */
 @media screen and (max-width: 750px) {
+  html {
+    font-size: 10px;
+  }
 
 .caja-prom h3{
   font-size: 2rem;
@@ -510,6 +526,10 @@ footer div{
   .contacto .datos-personales label {
     padding-left: 0;
     font-size: 1.75rem;
+  }
+
+  .ubicacion{
+    margin-top: 30px;
   }
 
   .ubicacion .mapa {

@@ -1,23 +1,24 @@
-
 Header y Footer con Bootstrap
 
+/_ ------------- Página Index -------------_/
 
-/* -------------  Página Index  -------------*/
+Uso de Flex-Box (Planteada y pendiente de Acomodar)
 
-Uso de Bootstrap (Armada)
+/_ ------------- Página Inicio -------------_/
 
-/* -------------  Página Inicio  -------------*/
+- Uso de Bootstrap, Grid System, y Flex-Box (Armada) 
+- Pagina Responsive
 
-Uso de Bootstrap (Armada)
-
-/* -------------  Página Productos  -------------*/
+/_ ------------- Página Productos -------------_/
 
 Uso de Grid en Galeria y Flex Box (Armada)
+- Pagina Responsive
 
-/* -------------  Página Consulta  -------------*/
+/_ ------------- Página Consulta -------------_/
 
 Uso de Flex Box (Armada)
+- Pagina Responsive
 
-/* -------------  Página Quienes Somos  -------------*/
+/_ ------------- Página Quienes Somos -------------_/
 
-Uso de Flex Box (Pendiente)
+Uso de Bootstrap, y Flex-Box (En Construccion)
