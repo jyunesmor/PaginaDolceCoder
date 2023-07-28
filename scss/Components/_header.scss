@@ -1,0 +1,31 @@
+header {
+   background-color: nth($paletacolores,5);
+   width: 100%;
+   height: auto;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 1;
+   nav {
+      .container {
+         img {
+            width: 200px;
+            height: 200px;
+         }
+      }
+      div {
+         ul {
+            li {
+               font-size: 1.3rem;
+               a {
+                  &:hover {
+                     border-bottom: 3px solid black;
+                     padding-bottom: 2px;
+                     color: aqua !important;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,700;1,100;1,200;1,300;1,400;1,600&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 
 @import url("https://fonts.cdnfonts.com/css/brittany-signature?styles=70169");
 
@@ -19,6 +19,11 @@
   --transparente: transparent;
   --Brittany-font: "Brittany Signature", sans-serif;
   --Montserrat-font: "Montserrat", sans-serif;
+  --Comforter-font: 'Comforter', cursive;
+  --Corinthia-font: 'Corinthia', cursive;
+  --Ruthie-font: 'Ruthie', cursive;
+  --Waterfall-font:'Waterfall', cursive;
+  --WindSong-font: 'WindSong', cursive;
 }
 
 html {
@@ -26,7 +31,9 @@ html {
   font-size: 16px;
 }
 
-body{
+body {
+  width: 100%;
+  min-height: 100vh;
   background-color: var(--tea-rose-red);
 }
 
@@ -61,7 +68,7 @@ header nav div ul li a:hover {
 
 /** Index */
 .contenedor-index {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(../img/cupcake.jpg);
@@ -71,7 +78,6 @@ header nav div ul li a:hover {
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
-  color: white;
 }
 
 .contenedor-index img {
@@ -79,34 +85,34 @@ header nav div ul li a:hover {
   justify-content: start;
   align-items: center;
   padding: 50px 50px;
-  opacity: 0.6;
+  opacity: 0.8;
   width: 450px;
 }
 
 .text-index {
-  height: 250px;
-  padding: 0 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: space-evenly;
+  color: var(--tea-rose-red);
+  font-family: var(--WindSong-font);
 }
 
 .text-index h1 {
-  margin-bottom: 50px;
+  font-size: 2rem;
+  filter: drop-shadow(4px 4px 1px var(--indian-red));
 }
 
 .text-index a {
   text-decoration: none;
-  color: white;
+  color: var(--tickle-me-pink);
+  border: 1px black solid;
+  background-color: var(--indian-red);
+  filter: drop-shadow(4px 4px 1px var(-));
+  border-radius: 15px;
+  width: 15%;
 }
 
 .text-index a h2 {
-  border: 1px black solid;
-  background-color: var(--indian-red);
-  border-radius: 5px;
-  display: inline;
-  padding: 8px;
+  color: var(--isabelline);
+  font-size: 1.95rem;
+  filter: drop-shadow(4px 4px 1px black);
 }
 
 /** ---- Inicio ---- */
@@ -128,7 +134,7 @@ header nav div ul li a:hover {
 
 /** ---- Productos ---- */
 
-.productos{
+.productos {
   width: 100%;
   margin: 60px auto;
 }
@@ -151,7 +157,7 @@ header nav div ul li a:hover {
   height: 300px;
   position: relative;
   border-radius: 15px;
-  background: linear-gradient(90deg,var(--indian-red) 0%, rgba(247,161,149,1) 2%, rgba(255,255,255,1) 100%);
+  background: linear-gradient(90deg, var(--indian-red) 0%, rgba(247, 161, 149, 1) 2%, rgba(255, 255, 255, 1) 100%);
 }
 
 .productos .cards-productos .card h5 {
@@ -280,8 +286,9 @@ h2 {
 }
 
 .info-contacto-dato h4 {
-  font-size: 1.25rem ;
+  font-size: 1.25rem;
 }
+
 .ubicacion .info-contacto .info-contacto-dato img {
   width: 35px;
   height: 35px;
@@ -355,12 +362,13 @@ h2 {
 
 /** ---- Quienes Somos ---- */
 
-.sec-carousel{
+.sec-carousel {
   background: lavenderblush;
   padding: 10px;
   margin-bottom: 50px;
 }
-.sec-carousel img{
+
+.sec-carousel img {
   object-fit: cover;
   height: 450px;
 }
@@ -380,34 +388,34 @@ h2 {
 /*! ---- FOOTER ---- */
 /**Footer armado con Bootstrap*/
 
-footer{
+footer {
   background-color: var(--indian-red);
   height: auto;
 }
 
-footer div{
-  height: 60px;  
+footer div {
+  height: 60px;
   min-width: 33%;
 }
 
-.text-boot h2{
+.text-boot h2 {
   font-family: var(--Brittany-font);
   font-size: 2.5rem;
   font-weight: 700;
   filter: drop-shadow(4px 4px 1px var(--dutch-white));
 }
 
-.redes-boot img{
+.redes-boot img {
   width: 35px;
   height: 35px;
 }
 
-.copy-boot img{
+.copy-boot img {
   width: 30px;
   height: 30px;
 }
 
-.copy-boot h3{
+.copy-boot h3 {
   font-family: var(--Montserrat-font);
   font-size: 1rem;
 }
@@ -416,6 +424,7 @@ footer div{
 
 /*! Media_Query 950px */
 @media screen and (max-width: 950px) {
+
   /** Contacto */
   html {
     font-size: 14px;
@@ -428,15 +437,15 @@ footer div{
     font-size: 10px;
   }
 
-.caja-prom h3{
-  font-size: 2rem;
-}
+  .caja-prom h3 {
+    font-size: 2rem;
+  }
 
 
   /** Productos */
-.productos{
+  .productos {
     height: auto;
-}
+  }
 
   .cards-productos {
     flex-wrap: wrap;
@@ -444,7 +453,7 @@ footer div{
     height: auto;
   }
 
-  .cards-productos .card{
+  .cards-productos .card {
     row-gap: 2.5rem;
   }
 
@@ -528,7 +537,7 @@ footer div{
     font-size: 1.75rem;
   }
 
-  .ubicacion{
+  .ubicacion {
     margin-top: 30px;
   }
 
@@ -571,25 +580,40 @@ footer div{
   .item-mesa-9 {
     grid-column: span 2;
   }
-footer{
-  height: auto;
-}
 
-.redes-boot img{
-  width: 25px;
-  height: 25px;
-}
+  footer {
+    height: auto;
+  }
+
+  .redes-boot img {
+    width: 25px;
+    height: 25px;
+  }
 
 }
 
 /*! Media_Query 600px */
-@media screen and (max-width: 600px) {
-
-}
+@media screen and (max-width: 600px) {}
 
 
 /*! Media_Query 450px */
 @media screen and (max-width: 450px) {
+
+  .contenedor-index img {
+    margin: auto;
+  }
+
+  .text-index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .text-index a {
+    width: 50%;
+  }
+
 
   .hero {
     display: none;
@@ -599,7 +623,7 @@ footer{
     display: none;
   }
 
-  .caja-prom{
+  .caja-prom {
     height: auto;
   }
 

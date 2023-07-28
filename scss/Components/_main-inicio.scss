@@ -1,0 +1,41 @@
+main {
+   .hero {
+      width: 100%;
+      min-height: 100vh;
+      background-image: url(../img/Postrefrutilla.jpg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-attachment: fixed;
+   }
+
+   .cont-inicio {
+      div{
+         div{
+            img{
+               width: 250px;
+               height: 250px;
+            }
+         }
+      }
+   }
+
+   section {
+      div {
+         caja-prom {
+            max-width: 300px;
+            height: 200px;
+         }
+      }
+   }
+
+   .fij-whatapp {
+      position: fixed;
+      bottom: 120px;
+      right: 50px;
+
+      img {
+         width: 50px;
+      }
+   }
+}

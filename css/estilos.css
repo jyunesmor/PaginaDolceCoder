@@ -1,0 +1,174 @@
+/*! ---- Reset ---- */
+@import url("https://fonts.googleapis.com/css2?family=Comforter&family=Corinthia:wght@400;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,700;1,100;1,200;1,300;1,400;1,600&family=Ruthie&family=Waterfall&family=WindSong:wght@400;500&display=swap");
+@import url("https://fonts.cdnfonts.com/css/brittany-signature?styles=70169");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/* Variables Tipo de Colores */
+/*indian-red*/
+/* Variables Tipo de Fuente */
+/*WindSong-font*/
+header {
+  background-color: #dd5a60ff;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1; }
+  header nav .container img {
+    width: 200px;
+    height: 200px; }
+  header nav div ul li {
+    font-size: 1.3rem; }
+    header nav div ul li a:hover {
+      border-bottom: 3px solid black;
+      padding-bottom: 2px;
+      color: aqua !important; }
+
+main .hero {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../img/Postrefrutilla.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed; }
+
+main .cont-inicio div div img {
+  width: 250px;
+  height: 250px; }
+
+main section div caja-prom {
+  max-width: 300px;
+  height: 200px; }
+
+main .fij-whatapp {
+  position: fixed;
+  bottom: 120px;
+  right: 50px; }
+  main .fij-whatapp img {
+    width: 50px; }
+
+main .hero {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../img/Postrefrutilla.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed; }
+
+main .ubicacion {
+  width: 80%;
+  height: 300px;
+  margin: auto;
+  margin-top: 30px;
+  display: flex; }
+  main .ubicacion .mapa {
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px; }
+    main .ubicacion .mapa iframe {
+      border-radius: 10px;
+      box-shadow: 2px 2px 15px #dd5a60ff; }
+  main .ubicacion .info-contacto {
+    width: 50%;
+    padding: 15px;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start; }
+    main .ubicacion .info-contacto .info-contacto-dato {
+      display: flex;
+      align-items: center;
+      gap: 30px; }
+      main .ubicacion .info-contacto .info-contacto-dato img {
+        width: 35px;
+        height: 35px; }
+      main .ubicacion .info-contacto .info-contacto-dato h4 {
+        font-size: 1.25rem; }
+
+main .contacto {
+  width: 80%;
+  height: 300px;
+  margin: auto;
+  margin-bottom: 50px;
+  display: flex; }
+  main .contacto .datos-personales {
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center; }
+    main .contacto .datos-personales input {
+      width: 80%;
+      height: 30px;
+      margin: auto;
+      margin-bottom: 3%;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 2px 2px 10px #dd5a60ff; }
+      main .contacto .datos-personales input[type="number"] {
+        -moz-appearance: textfield; }
+        main .contacto .datos-personales input[type="number"]input[type="number"]::-webkit-inner-spin-button, main .contacto .datos-personales input[type="number"]input[type="number"]::-webkit-outer-spin-button {
+          -webkit-appearance: none; }
+    main .contacto .datos-personales label {
+      padding-left: 10%;
+      font-size: 1.1rem; }
+  main .contacto .datos-consulta {
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    main .contacto .datos-consulta textarea {
+      width: 90%;
+      margin: auto;
+      margin-bottom: 3%;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 2px 2px 10px #dd5a60ff; }
+    main .contacto .datos-consulta label {
+      padding-left: 5%;
+      margin-bottom: 1%;
+      font-size: 1.1rem; }
+    main .contacto .datos-consulta button {
+      width: 50%;
+      margin: auto;
+      margin-top: 1.5rem;
+      font-size: 1rem;
+      padding: 2%;
+      border-radius: 8px;
+      box-shadow: 2px 2px 10px #dd5a60ff; }
+
+main .fij-whatapp {
+  position: fixed;
+  bottom: 120px;
+  right: 50px; }
+  main .fij-whatapp img {
+    width: 50px; }
+
+footer {
+  background-color: #dd5a60ff;
+  height: auto; }
+  footer .text-boot h2 {
+    font-family: "Corinthia";
+    font-size: 2.5rem;
+    font-weight: 700;
+    filter: drop-shadow(4px 4px 1px #f9f3ecff); }
+  footer .redes-boot a img {
+    width: 30px;
+    height: 30px; }
+  footer .copy-boot img {
+    width: 30px;
+    height: 30px; }
+  footer .copy-boot h3 {
+    font-family: sans-serif;
+    font-size: 1rem; }
