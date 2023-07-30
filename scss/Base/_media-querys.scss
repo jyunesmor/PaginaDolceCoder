@@ -1,0 +1,23 @@
+/*! Media_Query 950px */
+
+@mixin notebook {
+   @media screen and (max-width: 950px) {
+      @content;
+   }
+}
+
+/*! Media_Query 750px */
+
+@mixin tablets {
+   @media screen and (max-width: 950px) {
+      @content;
+   }
+}
+
+/*! Media_Query 450px */
+
+@mixin mobile {
+   @media screen and (max-width: 450px) {
+      @content;
+   }
+}

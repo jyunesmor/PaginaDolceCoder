@@ -1,13 +1,13 @@
 footer {
    background-color: nth($paletacolores, 5);
-   height: auto;
+   height: 100px;
 
    .text-boot {
-      h2 {
-         font-family: nth($fuentes , 7);
-         font-size: 2.5rem;
-         font-weight: 700;
-         filter: drop-shadow(4px 4px 1px nth($paletacolores, 2));
+      a{
+         img{
+         width: 150px;
+         height: 94px;
+         }
       }
    }
 

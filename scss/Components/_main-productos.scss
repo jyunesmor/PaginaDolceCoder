@@ -1,0 +1,146 @@
+main {
+   .hero {
+      width: 100%;
+      max-height: calc(50vh - 150px);
+      background-image: url(../img/Postrefrutilla.jpg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-attachment: fixed;
+   }
+
+   .productos {
+      width: 100%;
+      margin: 60px auto;
+
+      h2 {
+         text-align: center;
+      }
+
+      .cards-productos {
+         width: 100%;
+         padding: 60px;
+         display: flex;
+         justify-content: space-around;
+         align-items: center;
+
+         .card {
+            width: 250px;
+            height: 300px;
+            position: relative;
+            border-radius: 15px;
+            background: linear-gradient(90deg, nth($paletacolores, 5) 0%, rgba(247, 161, 149, 1) 2%, rgba(255, 255, 255, 1) 100%);
+
+            h5 {
+               position: absolute;
+               left: 0;
+               bottom: 0;
+               transform: rotate(0deg);
+               translate: 65px -5px;
+               font-size: 30px;
+               color: nth($paletacolores, 5);
+               text-shadow: 2px 2px 1px black;
+            }
+
+            a {
+               img {
+                  width: 100%;
+                  height: 300px;
+                  border-radius: 15px;
+                  box-shadow: 3px 3px 25px black;
+               }
+            }
+         }
+      }
+   }
+
+   h2 {
+      text-align: center;
+      margin: 0 auto 15px auto;
+      font-size: 40px;
+   }
+
+   /* Galeria Grid Productos */
+   .galeria {
+      width: 98%;
+      margin: auto;
+      .galeria-productos {
+         width: 95%;
+         margin: 30px auto;
+         display: grid;
+         grid-template-columns: repeat(4, 1fr);
+         grid-auto-rows: 350px;
+         gap: 10px;
+
+         .gal-item {
+            border: 1px black solid;
+            border-radius: 10px;
+            box-shadow: 8px 8px 25px black;
+
+            img {
+               width: 100%;
+               height: 100%;
+               border-radius: 10px;
+               object-fit: cover;
+            }
+         }
+
+         .item-choco-2 {
+            grid-column: span 2;
+            grid-row: span 2;
+         }
+
+         /* Galeria Chocolateria */
+
+         .item-choco-3 {}
+
+         .item-choco-4 {}
+
+         .item-choco-6 {
+            grid-column: span 2;
+         }
+
+         .item-choco-9 {}
+
+         /* Galeria Pasteleria */
+
+         .item-past-1 {}
+
+         .item-past-2 {
+            grid-row: span 2;
+         }
+
+         .item-past-3 {
+            grid-column: span 2;
+         }
+
+         .item-past-4 {}
+
+         .item-past-5 {
+            grid-column: span 2;
+         }
+
+         .item-past-6 {}
+
+         .item-past-8 {}
+
+         .item-past-9 {}
+
+         /* Galeria Mesa */
+         .item-mesa-4 {
+            grid-row: span 2;
+         }
+
+         .item-mesa-5 {
+            grid-column: span 2;
+         }
+
+         .item-mesa-8 {
+            grid-column: span 2;
+         }
+
+         .item-mesa-9 {}
+
+      }
+   }
+}

@@ -1,0 +1,47 @@
+/** Index */
+main {
+   .contenedor-index {
+      width: 100vw;
+      height: 100vh;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../img/cupcake.jpg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      .row {
+         div {
+            img {
+               display: flex;
+               justify-content: start;
+               align-items: center;
+               padding: 50px 50px;
+               opacity: 0.8;
+               width: 450px;
+            }
+         }
+         .text-index {
+            color: nth($paletacolores,4);
+            font-family: nth($fuentes,7);
+            h1 {
+               font-size: 3.5rem;
+               filter: drop-shadow(4px 4px 1px nth($paletacolores,5));
+            }
+            a {
+               text-decoration: none;
+               color: nth($paletacolores,3);
+               border: 1px black solid;
+               background-color: nth($paletacolores,5);
+               border-radius: 15px;
+               width: 15%;
+               h2 {
+                  color: nth($paletacolores,2);
+                  font-size: 1.95rem;
+                  filter: drop-shadow(4px 4px 1px black);
+               }
+            }
+         }
+      }
+   }
+}

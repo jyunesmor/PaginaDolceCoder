@@ -1,8 +1,10 @@
 main {
    .hero {
+      color: aliceblue;
+      margin-top: 100px;
       width: 100%;
-      min-height: 100vh;
-      background-image: url(../img/Postrefrutilla.jpg);
+      min-height: 800px;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/Postrefrutilla.jpg);
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
@@ -11,24 +13,21 @@ main {
 
    .ubicacion {
       width: 80%;
-      height: 300px;
+      height: 350px;
       margin: auto;
-      margin-top: 30px;
       display: flex;
-
       .mapa {
+         margin: auto;
          width: 50%;
          padding: 30px;
          display: flex;
          justify-content: center;
          border-radius: 10px;
-
          iframe {
             border-radius: 10px;
             box-shadow: 2px 2px 15px nth($paletacolores, 5);
          }
       }
-
       .info-contacto {
          width: 50%;
          padding: 15px;
@@ -37,17 +36,14 @@ main {
          flex-direction: column;
          justify-content: space-evenly;
          align-items: start;
-
          .info-contacto-dato {
             display: flex;
             align-items: center;
             gap: 30px;
-
             img {
                width: 35px;
                height: 35px;
             }
-
             h4 {
                font-size: 1.25rem;
             }
@@ -57,11 +53,9 @@ main {
 
    .contacto {
       width: 80%;
-      height: 300px;
+      height: 350px;
       margin: auto;
-      margin-bottom: 50px;
       display: flex;
-
       .datos-personales {
          width: 50%;
          padding: 30px;
@@ -69,7 +63,6 @@ main {
          flex-direction: column;
          justify-content: space-between;
          align-content: center;
-
          input {
             width: 80%;
             height: 30px;
@@ -78,7 +71,6 @@ main {
             padding: 10px;
             border-radius: 8px;
             box-shadow: 2px 2px 10px nth($paletacolores, 5);
-
             &[type="number"] {
                -moz-appearance: textfield;
                &input[type="number"]::-webkit-inner-spin-button,
@@ -86,22 +78,18 @@ main {
                   -webkit-appearance: none;
                }
             }
-
-
          }
          label {
             padding-left: 10%;
             font-size: 1.1rem;
          }
       }
-
       .datos-consulta {
          width: 50%;
          padding: 30px;
          display: flex;
          flex-direction: column;
          justify-content: space-between;
-
          textarea {
             width: 90%;
             margin: auto;
@@ -110,13 +98,11 @@ main {
             border-radius: 8px;
             box-shadow: 2px 2px 10px nth($paletacolores, 5);
          }
-
          label {
             padding-left: 5%;
             margin-bottom: 1%;
             font-size: 1.1rem;
          }
-
          button {
             width: 50%;
             margin: auto;
@@ -128,14 +114,5 @@ main {
          }
       }
    }
-
-   .fij-whatapp {
-      position: fixed;
-      bottom: 120px;
-      right: 50px;
-
-      img {
-         width: 50px;
-      }
-   }
+   
 }

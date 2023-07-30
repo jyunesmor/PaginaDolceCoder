@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,38 +9,47 @@
   <!--BOOTSTRAP 5.3-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <!--CSS-->
-<!--   <link rel="stylesheet" href="../css/styleproyecto.css" /> -->
   <!--SCSS-->
   <link rel="stylesheet" href="../css/estilos.css" />
 </head>
+
 <body>
   <header>
     <nav class="navbar navbar-expand-lg">
       <div class="container justify-content-lg-center justify-content-md-between">
-        <a class="navbar-brand d-lg-none ml-5" href="../pages/inicio.html"><img src="../img/DolceVerónicalb.png"
+        <a class="navbar-brand d-lg-none " href="./inicio.html"><img src="../img/DolceVerónicaln4.png"
             alt="logo dolce verónica" /></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
-          <ul class="navbar-nav mx-auto">
+          <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="../pages/inicio.html">Inicio</a>
+              <a class="nav-link m-auto" href="./inicio.html">
+                <h6>Inicio</h6>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./quienessomos.html">Quienes Somos</a>
+              <a class="nav-link m-auto" href="./quienessomos.html">
+                <h6>Quienes Somos</h6>
+              </a>
             </li>
           </ul>
-          <a class="navbar-brand d-none d-lg-block" href="../pages/inicio.html"><img src="../img/DolceVerónicalb.png"
-              alt="logo dolce verónica" /></a>
-          <ul class="navbar-nav ml-5">
+          <div class="d-flex mx-4">
+            <a class="navbar-brand d-none d-lg-block m-auto" href="../pages/inicio.html"><img
+                src="../img/DolceVerónicaln4.png" alt="logo dolce verónica" /></a>
+          </div>
+          <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="./contacto.html">Contacto</a>
+              <a class="nav-link m-auto" aria-current="page" href="./contacto.html">
+                <h6>Contacto</h6>
+              </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./productos.html">Productos</a>
+            <li class="nav-item ">
+              <a class="nav-link m-auto" href="./productos.html">
+                <h6>Productos</h6>
+              </a>
             </li>
           </ul>
         </div>
@@ -48,59 +58,59 @@
   </header>
   <main>
     <section class="hero">
-    </section>
-    <section class="ubicacion">
-      <div class="mapa">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1702.8913121497817!2d-64.18268656142588!3d-31.39255680398308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943298686789d1f5%3A0x8cf972534fc3ba8b!2sJujuy%202080%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1688771679269!5m2!1ses-419!2sar"
-          width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      <div class="info-contacto">
-        <div class="info-contacto-dato">
-          <img src="../img/telefono.png" alt="telefono" />
-          <h4>
-            0351-154895796
-          </h4>
+      <section class="ubicacion">
+        <div class="mapa">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1702.8913121497817!2d-64.18268656142588!3d-31.39255680398308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943298686789d1f5%3A0x8cf972534fc3ba8b!2sJujuy%202080%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1688771679269!5m2!1ses-419!2sar"
+            width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <div class="info-contacto-dato w-100">
-          <img src="../img/email.png" alt="email" />
-          <h4>
-            dolceveronica@gmail.com
-          </h4>
+        <div class="info-contacto">
+          <div class="info-contacto-dato">
+            <img src="../img/telefono.png" alt="telefono" />
+            <h4>
+              0351-154895796
+            </h4>
+          </div>
+          <div class="info-contacto-dato w-100">
+            <img src="../img/email.png" alt="email" />
+            <h4>
+              dolceveronica@gmail.com
+            </h4>
+          </div>
+          <div class="info-contacto-dato">
+            <img src="../img/ubicacion.png" alt="ubicacion" />
+            <h4>
+              Jujuy N° 2080, Alta Córdoba, Cordoba, Argentina.-
+            </h4>
+          </div>
         </div>
-        <div class="info-contacto-dato">
-          <img src="../img/ubicacion.png" alt="ubicacion" />
-          <h4>
-            Jujuy N° 2080, Alta Córdoba, Cordoba, Argentina.-
-          </h4>
+      </section>
+      <section class="contacto">
+        <div class="datos-personales">
+          <label for="nombre">Nombre</label>
+          <input type="text">
+          <label for="nombre">Apellido</label>
+          <input type="text">
+          <label for="nombre">Telefono</label>
+          <input type="number">
+          <label for="nombre">E-mail</label>
+          <input type="email">
         </div>
-      </div>
-    </section>
-    <section class="contacto">
-      <div class="datos-personales">
-        <label for="nombre">Nombre</label>
-        <input type="text">
-        <label for="nombre">Apellido</label>
-        <input type="text">
-        <label for="nombre">Telefono</label>
-        <input type="number" >
-        <label for="nombre">E-mail</label>
-        <input type="email">
-      </div>
-      <div class="datos-consulta">
-        <label for="nombre">Consulta</label>
-        <textarea type="text" cols="40" rows="12" placeholder="Ingresa tu Consulta"></textarea>
-        <button type="button">Enviar</button>
-      </div>
+        <div class="datos-consulta">
+          <label for="nombre">Consulta</label>
+          <textarea type="text" cols="40" rows="12" placeholder="Ingresa tu Consulta"></textarea>
+          <button type="button">Enviar</button>
+        </div>
+      </section>
     </section>
     <div class="fij-whatapp">
       <img src="../img/whatsappnvocolor.png" alt="logo whatsapp" />
     </div>
   </main>
   <footer class="d-flex flex-column flex-md-row align-items-center p-4 w-100">
-    <div class="text-boot d-flex w-100 ">
-      <h2 class="m-auto">Dolce Veronica</h2>
+    <div class="text-boot w-100 d-flex justify-content-center ">
+      <a href="./inicio.html"><img src="../img/DolceVerónicaln4.png" alt="logo dolce verónica" /></a>
     </div>
     <div class="redes-boot d-flex justify-content-center align-items-center gap-2 w-100 ">
       <a href="https://www.facebook.com/profile.php?id=100009540382256" target="_blank"><img class="m-3"
@@ -116,7 +126,7 @@
       </h3>
     </div>
   </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
 </body>

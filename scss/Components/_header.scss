@@ -1,28 +1,40 @@
 header {
-   background-color: nth($paletacolores,5);
+   background-color: nth($paletacolores, 5);
    width: 100%;
-   height: auto;
+   min-height: 100px;
    position: fixed;
    top: 0;
    left: 0;
    z-index: 1;
+
    nav {
       .container {
-         img {
-            width: 200px;
-            height: 200px;
+         a {
+            width: 150px;
+            img {
+               width: 150px;
+               height: 94px;
+            }
          }
       }
       div {
          ul {
             li {
-               font-size: 1.3rem;
+               font-size: 1.15rem;
+               width: 150px;
                a {
-                  &:hover {
+                  display: inline-flex;
+                  h6{
+                     width: fit-content;
+                     margin: auto;
+                     text-align: center;
+                     &:hover {
                      border-bottom: 3px solid black;
                      padding-bottom: 2px;
                      color: aqua !important;
+                     }
                   }
+
                }
             }
          }
