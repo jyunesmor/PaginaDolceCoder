@@ -10,6 +10,10 @@ html {
   font-family: nth($fuentes, 2);
   font-size: 16px;
 
+  @include tablets {
+    font-size: 10px;
+  }
+
   body {
     width: 100%;
     min-height: 100vh;
@@ -24,6 +28,10 @@ html {
 
         img {
           width: 50px;
+        }
+
+        @include mobile {
+          display: none;
         }
       }
     }

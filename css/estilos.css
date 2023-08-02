@@ -4,6 +4,11 @@
 /*indian-red*/
 /* Variables Tipo de Fuente */
 /*WindSong-font*/
+/* ----- Mixins ----- */
+/*! Media_Query 950px */
+/*! Media_Query 750px */
+/*! Media_Query 600px */
+/*! Media_Query 450px */
 /*! ---- Reset ---- */
 * {
   margin: 0;
@@ -13,6 +18,9 @@
 html {
   font-family: sans-serif;
   font-size: 16px; }
+  @media screen and (max-width: 750px) {
+    html {
+      font-size: 10px; } }
   html body {
     width: 100%;
     min-height: 100vh;
@@ -25,10 +33,10 @@ html {
         right: 50px; }
         html body main .fij-whatapp img {
           width: 50px; }
+        @media screen and (max-width: 450px) {
+          html body main .fij-whatapp {
+            display: none; } }
 
-/*! Media_Query 950px */
-/*! Media_Query 750px */
-/*! Media_Query 450px */
 header {
   background-color: #dd5a60ff;
   width: 100%;
@@ -74,6 +82,9 @@ main .contenedor-index {
     padding: 50px 50px;
     opacity: 0.8;
     width: 450px; }
+    @media screen and (max-width: 450px) {
+      main .contenedor-index .row div img {
+        margin: auto; } }
   main .contenedor-index .row .text-index {
     color: #e6b7b8;
     font-family: "Corinthia"; }
@@ -87,10 +98,18 @@ main .contenedor-index {
       background-color: #dd5a60ff;
       border-radius: 15px;
       width: 15%; }
+      @media screen and (max-width: 450px) {
+        main .contenedor-index .row .text-index a {
+          width: 50%; } }
       main .contenedor-index .row .text-index a h2 {
         color: #f9f3ecff;
         font-size: 1.95rem;
         filter: drop-shadow(4px 4px 1px black); }
+    @media screen and (max-width: 450px) {
+      main .contenedor-index .row .text-index {
+        display: flex;
+        justify-content: center;
+        align-items: center; } }
 
 main .contenedor-hero {
   width: 100%; }
@@ -100,6 +119,9 @@ main .contenedor-hero {
     background-position: center center;
     background-size: cover;
     background-attachment: fixed; }
+  @media screen and (max-width: 450px) {
+    main .contenedor-hero {
+      display: none; } }
 
 main .cont-inicio div div img {
   width: 250px;
@@ -109,102 +131,161 @@ main .container div .caja-prom {
   max-width: 300px;
   height: 200px; }
 
-main .hero {
-  color: aliceblue;
-  margin-top: 100px;
-  width: 100%;
-  min-height: 800px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/Postrefrutilla.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed; }
-
-main .ubicacion {
-  width: 80%;
-  height: 350px;
-  margin: auto;
-  display: flex; }
-  main .ubicacion .mapa {
+main {
+  min-height: calc(100vh - 200px); }
+  main .hero {
+    width: 100%;
+    min-height: 92vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/Postrefrutilla.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed; }
+    @media screen and (max-width: 750px) {
+      main .hero {
+        height: auto; } }
+  main .ubicacion {
+    width: 80%;
+    height: 350px;
     margin: auto;
-    width: 50%;
-    padding: 30px;
     display: flex;
-    justify-content: center;
-    border-radius: 10px; }
-    main .ubicacion .mapa iframe {
-      border-radius: 10px;
-      box-shadow: 2px 2px 15px #dd5a60ff; }
-  main .ubicacion .info-contacto {
-    width: 50%;
-    padding: 15px;
-    padding-left: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: start; }
-    main .ubicacion .info-contacto .info-contacto-dato {
-      display: flex;
-      align-items: center;
-      gap: 30px; }
-      main .ubicacion .info-contacto .info-contacto-dato img {
-        width: 35px;
-        height: 35px; }
-      main .ubicacion .info-contacto .info-contacto-dato h4 {
-        font-size: 1.25rem; }
-
-main .contacto {
-  width: 80%;
-  height: 350px;
-  margin: auto;
-  display: flex; }
-  main .contacto .datos-personales {
-    width: 50%;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-content: center; }
-    main .contacto .datos-personales input {
-      width: 80%;
-      height: 30px;
+    background-color: lightsalmon; }
+    @media screen and (max-width: 750px) {
+      main .ubicacion {
+        flex-direction: column;
+        height: auto; } }
+    @media screen and (max-width: 450px) {
+      main .ubicacion {
+        height: auto; } }
+    main .ubicacion .mapa {
       margin: auto;
-      margin-bottom: 3%;
-      padding: 10px;
-      border-radius: 8px;
-      box-shadow: 2px 2px 10px #dd5a60ff; }
-      main .contacto .datos-personales input[type="number"] {
-        -moz-appearance: textfield; }
-        main .contacto .datos-personales input[type="number"]input[type="number"]::-webkit-inner-spin-button, main .contacto .datos-personales input[type="number"]input[type="number"]::-webkit-outer-spin-button {
-          -webkit-appearance: none; }
-    main .contacto .datos-personales label {
-      padding-left: 10%;
-      font-size: 1.1rem; }
-  main .contacto .datos-consulta {
-    width: 50%;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; }
-    main .contacto .datos-consulta textarea {
-      width: 90%;
-      margin: auto;
-      margin-bottom: 3%;
-      padding: 10px;
-      border-radius: 8px;
-      box-shadow: 2px 2px 10px #dd5a60ff; }
-    main .contacto .datos-consulta label {
-      padding-left: 5%;
-      margin-bottom: 1%;
-      font-size: 1.1rem; }
-    main .contacto .datos-consulta button {
       width: 50%;
-      margin: auto;
-      margin-top: 1.5rem;
-      font-size: 1rem;
-      padding: 2%;
-      border-radius: 8px;
-      box-shadow: 2px 2px 10px #dd5a60ff; }
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px; }
+      @media screen and (max-width: 750px) {
+        main .ubicacion .mapa {
+          width: 100%;
+          margin: auto; } }
+      main .ubicacion .mapa iframe {
+        border-radius: 10px;
+        box-shadow: 2px 2px 15px #dd5a60ff; }
+    main .ubicacion .info-contacto {
+      width: 50%;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: start; }
+      @media screen and (max-width: 750px) {
+        main .ubicacion .info-contacto {
+          width: 100%;
+          margin-bottom: 50px; } }
+      main .ubicacion .info-contacto .info-contacto-dato {
+        display: flex;
+        align-items: center;
+        gap: 30px; }
+        @media screen and (max-width: 750px) {
+          main .ubicacion .info-contacto .info-contacto-dato {
+            width: 80%;
+            margin: auto;
+            margin-bottom: 25px; } }
+        main .ubicacion .info-contacto .info-contacto-dato img {
+          width: 35px;
+          height: 35px; }
+        main .ubicacion .info-contacto .info-contacto-dato h4 {
+          font-size: 1.25rem; }
+  main .contacto {
+    width: 80%;
+    height: 350px;
+    margin: auto;
+    margin-bottom: 30px;
+    display: flex; }
+    @media screen and (max-width: 750px) {
+      main .contacto {
+        flex-direction: column;
+        height: auto; } }
+    @media screen and (max-width: 600px) {
+      main .contacto {
+        height: auto; } }
+    @media screen and (max-width: 450px) {
+      main .contacto {
+        height: auto; } }
+    main .contacto .datos-personales {
+      width: 50%;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center; }
+      @media screen and (max-width: 750px) {
+        main .contacto .datos-personales {
+          width: 100%;
+          margin: auto; } }
+      main .contacto .datos-personales input {
+        width: 80%;
+        height: 30px;
+        margin: auto;
+        margin-bottom: 3%;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 2px 2px 10px #dd5a60ff; }
+        @media screen and (max-width: 750px) {
+          main .contacto .datos-personales input {
+            width: 100%; } }
+        main .contacto .datos-personales input[type="number"] {
+          -moz-appearance: textfield; }
+          main .contacto .datos-personales input[type="number"]input[type="number"]::-webkit-inner-spin-button, main .contacto .datos-personales input[type="number"]input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none; }
+      main .contacto .datos-personales label {
+        padding-left: 10%;
+        font-size: 1.1rem; }
+        @media screen and (max-width: 750px) {
+          main .contacto .datos-personales label {
+            padding-left: 0;
+            font-size: 1.75rem; } }
+    main .contacto .datos-consulta {
+      width: 50%;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      @media screen and (max-width: 750px) {
+        main .contacto .datos-consulta {
+          width: 100%;
+          height: auto; } }
+      main .contacto .datos-consulta textarea {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 3%;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 2px 2px 10px #dd5a60ff; }
+        @media screen and (max-width: 750px) {
+          main .contacto .datos-consulta textarea {
+            width: 100%; } }
+      main .contacto .datos-consulta label {
+        padding-left: 5%;
+        margin-bottom: 1%;
+        font-size: 1.1rem; }
+        @media screen and (max-width: 750px) {
+          main .contacto .datos-consulta label {
+            padding-left: 0;
+            font-size: 1.75rem; } }
+      main .contacto .datos-consulta button {
+        width: 50%;
+        margin: auto;
+        margin-top: 1.5rem;
+        font-size: 1rem;
+        padding: 2%;
+        border-radius: 8px;
+        box-shadow: 2px 2px 10px #dd5a60ff; }
+        @media screen and (max-width: 750px) {
+          main .contacto .datos-consulta button {
+            width: 70%;
+            font-size: 1.5rem; } }
 
 main {
   /* Galeria Grid Productos */ }
@@ -216,23 +297,44 @@ main {
     background-position: center center;
     background-size: cover;
     background-attachment: fixed; }
+    @media screen and (max-width: 450px) {
+      main .hero {
+        display: none; } }
   main .productos {
     width: 100%;
     margin: 60px auto; }
+    @media screen and (max-width: 750px) {
+      main .productos {
+        height: auto; } }
+    @media screen and (max-width: 450px) {
+      main .productos {
+        margin-top: 150px; } }
     main .productos h2 {
       text-align: center; }
+      @media screen and (max-width: 450px) {
+        main .productos h2 {
+          font-size: 2.75rem;
+          text-align: center; } }
     main .productos .cards-productos {
       width: 100%;
       padding: 60px;
       display: flex;
       justify-content: space-around;
       align-items: center; }
+      @media screen and (max-width: 750px) {
+        main .productos .cards-productos {
+          flex-wrap: wrap;
+          gap: 2.5rem;
+          height: auto; } }
       main .productos .cards-productos .card {
         width: 250px;
         height: 300px;
         position: relative;
         border-radius: 15px;
         background: linear-gradient(90deg, #dd5a60ff 0%, #f7a195 2%, white 100%); }
+        @media screen and (max-width: 750px) {
+          main .productos .cards-productos .card {
+            row-gap: 2.5rem; } }
         main .productos .cards-productos .card h5 {
           position: absolute;
           left: 0;
@@ -251,6 +353,9 @@ main {
     text-align: center;
     margin: 0 auto 15px auto;
     font-size: 40px; }
+    @media screen and (max-width: 450px) {
+      main h2 {
+        font-size: 2.5rem; } }
   main .galeria {
     width: 98%;
     margin: auto; }
@@ -264,32 +369,82 @@ main {
       /* Galeria Chocolateria */
       /* Galeria Pasteleria */
       /* Galeria Mesa */ }
+      @media screen and (max-width: 750px) {
+        main .galeria .galeria-productos {
+          grid-template-columns: repeat(3, 1fr);
+          grid-auto-rows: 35rem;
+          gap: 10px; } }
+      @media screen and (max-width: 600px) {
+        main .galeria .galeria-productos {
+          width: 95%;
+          grid-template-columns: 2fr;
+          grid-auto-rows: 18rem; } }
+      @media screen and (max-width: 450px) {
+        main .galeria .galeria-productos {
+          width: 85%;
+          grid-template-columns: 1fr;
+          grid-auto-rows: 18rem; } }
       main .galeria .galeria-productos .gal-item {
         border: 1px black solid;
         border-radius: 10px;
-        box-shadow: 8px 8px 25px black; }
+        box-shadow: 8px 8px 25px black;
+        min-width: 100px;
+        height: auto; }
         main .galeria .galeria-productos .gal-item img {
           width: 100%;
           height: 100%;
           border-radius: 10px;
           object-fit: cover; }
+      @media screen and (max-width: 600px) {
+        main .galeria .galeria-productos .item-choco-1 {
+          display: none; } }
       main .galeria .galeria-productos .item-choco-2 {
         grid-column: span 2;
         grid-row: span 2; }
-      main .galeria .galeria-productos .item-choco-6 {
+        @media screen and (max-width: 450px) {
+          main .galeria .galeria-productos .item-choco-2 {
+            grid-column: span 1;
+            grid-row: span 1; } }
+      main .galeria .galeria-productos .item-choco-9 {
         grid-column: span 2; }
-      main .galeria .galeria-productos .item-past-2 {
+        @media screen and (max-width: 600px) {
+          main .galeria .galeria-productos .item-choco-9 {
+            grid-column: span 1; } }
+      main .galeria .galeria-productos .item-past-7 {
+        grid-column: span 2;
         grid-row: span 2; }
-      main .galeria .galeria-productos .item-past-3 {
+        @media screen and (max-width: 450px) {
+          main .galeria .galeria-productos .item-past-7 {
+            grid-column: span 1;
+            grid-row: span 1; } }
+      main .galeria .galeria-productos .item-mesa-2 {
         grid-column: span 2; }
-      main .galeria .galeria-productos .item-past-5 {
-        grid-column: span 2; }
-      main .galeria .galeria-productos .item-mesa-4 {
+        @media screen and (max-width: 450px) {
+          main .galeria .galeria-productos .item-mesa-2 {
+            grid-column: span 1; } }
+      @media screen and (max-width: 750px) {
+        main .galeria .galeria-productos .item-mesa-3 {
+          grid-row: span 2; } }
+      @media screen and (max-width: 450px) {
+        main .galeria .galeria-productos .item-mesa-3 {
+          grid-row: span 1; } }
+      @media screen and (max-width: 750px) {
+        main .galeria .galeria-productos .item-mesa-6 {
+          display: none; } }
+      main .galeria .galeria-productos .item-mesa-7 {
         grid-row: span 2; }
-      main .galeria .galeria-productos .item-mesa-5 {
-        grid-column: span 2; }
+        @media screen and (max-width: 750px) {
+          main .galeria .galeria-productos .item-mesa-7 {
+            grid-column: span 3; } }
+        @media screen and (max-width: 450px) {
+          main .galeria .galeria-productos .item-mesa-7 {
+            grid-column: span 1;
+            grid-row: span 1; } }
       main .galeria .galeria-productos .item-mesa-8 {
         grid-column: span 2; }
+        @media screen and (max-width: 450px) {
+          main .galeria .galeria-productos .item-mesa-8 {
+            grid-column: span 1; } }
 
 main {
   /** ---- Quienes Somos ---- */ }
@@ -303,16 +458,44 @@ main {
 
 footer {
   background-color: #dd5a60ff;
-  height: 100px; }
-  footer .text-boot a img {
-    width: 150px;
-    height: 94px; }
-  footer .redes-boot a img {
-    width: 30px;
-    height: 30px; }
-  footer .copy-boot img {
-    width: 30px;
-    height: 30px; }
-  footer .copy-boot h3 {
-    font-family: sans-serif;
-    font-size: 1rem; }
+  height: 100px;
+  width: 100%; }
+  @media screen and (max-width: 750px) {
+    footer {
+      height: auto;
+      flex-direction: column; } }
+  @media screen and (max-width: 600px) {
+    footer {
+      height: auto; } }
+  @media screen and (max-width: 450px) {
+    footer {
+      height: auto; } }
+  footer .text-boot {
+    width: 30%; }
+    footer .text-boot a img {
+      width: 150px;
+      height: 94px; }
+  footer .redes-copy {
+    width: 70%; }
+    @media screen and (max-width: 750px) {
+      footer .redes-copy {
+        width: 95%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center; } }
+    @media screen and (max-width: 450px) {
+      footer .redes-copy {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; } }
+    footer .redes-copy .redes-boot a img {
+      width: 30px;
+      height: 30px; }
+    footer .redes-copy .copy-boot img {
+      width: 30px;
+      height: 30px; }
+    footer .redes-copy .copy-boot h3 {
+      font-family: sans-serif;
+      font-size: 1rem; }

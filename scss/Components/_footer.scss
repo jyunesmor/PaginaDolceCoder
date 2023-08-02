@@ -1,15 +1,42 @@
 footer {
    background-color: nth($paletacolores, 5);
    height: 100px;
+   width: 100%;
+
+   @include tablets {
+      height: auto;
+      flex-direction: column;
+   }
+
+   @include mobile600 {
+      height: auto;
+   }
+
+   @include mobile {
+      height: auto;
+   }
 
    .text-boot {
-      a{
-         img{
-         width: 150px;
-         height: 94px;
+      width: 30%;
+      a {
+         img {
+            width: 150px;
+            height: 94px;
          }
       }
    }
+
+   .redes-copy{
+      width: 70%;
+      @include tablets {
+         width: 95%;
+         @include flex(flex,space-evenly,center);
+      }
+
+      @include mobile {
+         width: 95%;
+         @include flexColumn (flex,column,center,center);
+      }
 
    .redes-boot {
       a {
@@ -31,4 +58,7 @@ footer {
          font-size: 1rem;
       }
    }
+
+   }
+
 }
