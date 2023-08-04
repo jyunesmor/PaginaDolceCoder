@@ -1,9 +1,7 @@
 main {
-   min-height: calc(100vh - 200px);
-
    .hero {
       width: 100%;
-      min-height: 92vh;
+      min-height: 75vh;
       background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/Postrefrutilla.jpg);
       background-repeat: no-repeat;
       background-position: center center;
@@ -15,12 +13,22 @@ main {
       }
    }
 
+   .title-cont{
+      text-align: center;
+      font-size: 3.5rem;
+      font-family: nth($fuentes,4);
+      padding: .5rem;
+
+      @include mobile {
+         margin-top: 110px;
+      }
+   }
+
    .ubicacion {
-      width: 80%;
+      width: 85%;
       height: 350px;
       margin: auto;
       display: flex;
-      background-color: lightsalmon;
 
       @include tablets {
          flex-direction: column;
@@ -29,6 +37,7 @@ main {
 
       @include mobile {
          height: auto;
+         width: 100%;
       }
 
       .mapa {
@@ -56,7 +65,7 @@ main {
 
          @include tablets {
             width: 100%;
-            margin-bottom: 50px;
+            margin-bottom: 10px;
          }
 
          .info-contacto-dato {
@@ -100,6 +109,7 @@ main {
 
       @include mobile {
          height: auto;
+         width: 95%;
       }
       .datos-personales {
          width: 50%;
@@ -137,6 +147,7 @@ main {
          label {
             padding-left: 10%;
             font-size: 1.1rem;
+            width: 100%;
 
             @include tablets {
                padding-left: 0;

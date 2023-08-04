@@ -18,6 +18,7 @@ main {
                padding: 50px 50px;
                opacity: 0.8;
                width: 450px;
+               filter: drop-shadow(4px 4px 2px nth($paletacolores,5));
 
                @include mobile {
                   margin: auto;

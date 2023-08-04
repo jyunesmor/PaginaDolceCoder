@@ -10,28 +10,39 @@ header {
    nav {
       .container {
          a {
-            width: 150px;
+            width: 200px;
+
             img {
-               width: 150px;
-               height: 94px;
+               width: 200px;
+               height: 125px;
+
+               @include mobile {
+                  width: 125px;
+                  height: 78px;
+               }
+
             }
          }
       }
+
       div {
          ul {
             li {
                font-size: 1.15rem;
-               width: 150px;
+               width: 200px;
+
                a {
                   display: inline-flex;
-                  h6{
+
+                  h6 {
                      width: fit-content;
                      margin: auto;
                      text-align: center;
+
                      &:hover {
-                     border-bottom: 3px solid black;
-                     padding-bottom: 2px;
-                     color: aqua !important;
+                        border-bottom: 3px solid black;
+                        padding-bottom: 2px;
+                        color: aqua !important;
                      }
                   }
 
