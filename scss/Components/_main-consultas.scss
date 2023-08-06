@@ -2,7 +2,8 @@ main {
    .hero {
       width: 100%;
       min-height: 75vh;
-      background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/Postrefrutilla.jpg);
+      background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+         url(../img/Postrefrutilla.jpg);
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
@@ -13,11 +14,11 @@ main {
       }
    }
 
-   .title-cont{
+   .title-cont {
       text-align: center;
       font-size: 3.5rem;
-      font-family: nth($fuentes,4);
-      padding: .5rem;
+      font-family: nth($fuentes, 4);
+      padding: 0.5rem;
 
       @include mobile {
          margin-top: 110px;
@@ -25,10 +26,14 @@ main {
    }
 
    .ubicacion {
-      width: 85%;
-      height: 350px;
-      margin: auto;
+      width: 100%;
+      height: auto;
       display: flex;
+      justify-content: center;
+
+      @include notebook {
+         width: 100%;
+      }
 
       @include tablets {
          flex-direction: column;
@@ -41,15 +46,16 @@ main {
       }
 
       .mapa {
-         margin: auto;
          width: 50%;
-         padding: 30px;
-         @include flex (flex,center,center);
+         @include flex(flex, center, center);
          border-radius: 10px;
+
+         @include notebook {
+            width: 100%;
+         }
 
          @include tablets {
             width: 100%;
-            margin: auto;
          }
 
          iframe {
@@ -60,22 +66,46 @@ main {
 
       .info-contacto {
          width: 50%;
-         padding: 15px;
          @include flexColumn(flex, column, space-evenly, start);
+
+         @include notebook {
+            width: 100%;
+            height: auto;
+         }
 
          @include tablets {
             width: 100%;
-            margin-bottom: 10px;
+            height: auto;
+            padding: 30px;
+
+            h4 {
+               font-size: 3rem;
+            }
+         }
+
+         @include mobile600 {
+            width: 100%;
+            height: auto;
+            padding: 30px;
+
+            h4 {
+               font-size: 20rem;
+            }
          }
 
          .info-contacto-dato {
             display: flex;
-            align-items: center;
-            gap: 30px;
+            width: 100%;
+            padding-left: 50px;
+            gap: 35px;
+
+            @include notebook {
+               width: 95%;
+               display: flex;
+            }
 
             @include tablets {
-               width: 80%;
-               margin: auto;
+               width: 100%;
                margin-bottom: 25px;
             }
 
@@ -86,17 +116,25 @@ main {
 
             h4 {
                font-size: 1.25rem;
+
+               @include notebook {
+                  font-size: 1.1rem;
+               }
             }
          }
       }
    }
 
    .contacto {
-      width: 80%;
-      height: 350px;
-      margin: auto;
+      width: 100%;
       margin-bottom: 30px;
       display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include notebook {
+         width: 100%;
+      }
 
       @include tablets {
          flex-direction: column;
@@ -109,29 +147,34 @@ main {
 
       @include mobile {
          height: auto;
-         width: 95%;
+         width: 100%;
       }
+
       .datos-personales {
          width: 50%;
-         padding: 30px;
-         @include flexColumn(flex, column, space-between, center);
+         padding: 10px;
+         @include flexColumn(flex, column, center, center);
+
+         @include notebook {
+            width: 100%;
+         }
 
          @include tablets {
             width: 100%;
-            margin: auto;
          }
 
          input {
-            width: 80%;
-            height: 30px;
-            margin: auto;
-            margin-bottom: 3%;
-            padding: 10px;
-            border-radius: 8px;
+            width: 85%;
+            height: 40px;
+            border-radius: 10px;
             box-shadow: 2px 2px 10px nth($paletacolores, 5);
 
-            @include tablets {
+            @include notebook {
                width: 100%;
+            }
+
+            @include tablets {
+               width: 85%;
             }
 
             &[type="number"] {
@@ -145,50 +188,67 @@ main {
          }
 
          label {
-            padding-left: 10%;
+            width: 85%;
+            margin-top: 50px;
             font-size: 1.1rem;
-            width: 100%;
+
+            @include notebook {
+               width: 100%;
+            }
 
             @include tablets {
+               width: 85%;
                padding-left: 0;
-               font-size: 1.75rem;
+               font-size: 1.35rem;
             }
          }
       }
 
       .datos-consulta {
          width: 50%;
-         padding: 30px;
-         display: flex;
-         flex-direction: column;
-         justify-content: space-between;
+         padding: 10px;
+         @include flexColumn(flex, column, center, center);
+
+         @include notebook {
+            width: 100%;
+         }
 
          @include tablets {
             width: 100%;
-            height: auto;
+         }
+
+         @include mobile600 {
+            width: 100%;
          }
 
          textarea {
-            width: 90%;
-            margin: auto;
-            margin-bottom: 3%;
+            width: 85%;
             padding: 10px;
             border-radius: 8px;
             box-shadow: 2px 2px 10px nth($paletacolores, 5);
 
-            @include tablets {
+            @include notebook {
                width: 100%;
+            }
+
+            @include tablets {
+               width: 85%;
             }
          }
 
          label {
-            padding-left: 5%;
-            margin-bottom: 1%;
+            width: 85%;
+            margin-top: 30px;
             font-size: 1.1rem;
 
+            @include notebook {
+               width: 100%;
+            }
+
             @include tablets {
-               padding-left: 0;
-               font-size: 1.75rem;
+               width: 85%;
+               padding-left: 40px;
+               font-size: 1.35rem;
             }
          }
 

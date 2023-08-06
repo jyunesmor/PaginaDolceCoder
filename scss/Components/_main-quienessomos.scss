@@ -1,14 +1,64 @@
 main {
-   /** ---- Quienes Somos ---- */
+  /** ---- Quienes Somos ---- */
+  .principal {
+    padding: 35px;
 
-   .sec-carousel {
-      background: lavenderblush;
-      padding: 10px;
-      margin-bottom: 50px;
-      img {
-         object-fit: cover;
-         height: 450px;
+    h1 {
+      padding: 1.5rem;
+      font-size: 4rem;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.5rem;
+      text-indent: 2rem;
+      padding: 2rem;
+
+      @include mobile {
+        text-align: justify;
       }
-   }
-   
+
+      .text {
+        font-size: 1.75rem;
+      }
+
+      span {
+        font-family: nth($fuentes, 5);
+        font-size: 4rem;
+
+        @include mobile {
+          display: block;
+          text-align: center;
+          padding-right: 35px;
+        }
+
+        @include mobile600 {
+          display: block;
+          text-align: center;
+          padding-right: 35px;
+        }
+
+        @include tablets {
+          display: block;
+          text-align: center;
+          padding-right: 35px;
+        }
+      }
+    }
+
+    @include mobile {
+      margin-top: 110px;
+    }
+  }
+
+  .sec-carousel {
+    background: lavenderblush;
+    padding: 10px;
+    margin-bottom: 50px;
+
+    img {
+      object-fit: cover;
+      height: 450px;
+    }
+  }
 }

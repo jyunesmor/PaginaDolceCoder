@@ -16,7 +16,7 @@ main {
    }
 
    .cont-inicio {
-      
+
       div {
          div {
             img {
@@ -25,14 +25,52 @@ main {
             }
          }
       }
+
+      @include mobile {
+         margin-top: 100px;
+      }
+
    }
 
    .container {
       div {
          .caja-prom {
-            max-width: 300px;
+            width: 250px;
             height: 200px;
 
+            @include notebook {
+               height: 150px;
+               margin: 50px auto;
+            }
+
+            @include tablets {
+               height: 150px;
+               margin: 50px auto;
+            }
+
+            @include mobile600 {
+               width: 225px;
+               height: 100px;
+            
+               h3 {
+                  height: 25rem;
+               }
+
+               p {
+                  height: 16rem;
+               }
+            }
+
+            @include mobile {
+               margin: 40px auto;
+               h3 {
+                  height: 14rem;
+               }
+
+               p {
+                  height: 8rem;
+               }
+            }
          }
       }
    }

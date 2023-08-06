@@ -1,7 +1,7 @@
-/*! Media_Query 950px */
+/*! Media_Query 900px */
 
 @mixin notebook {
-   @media screen and (max-width: 950px) {
+   @media screen and (max-width: 900px) {
       @content;
    }
 }
