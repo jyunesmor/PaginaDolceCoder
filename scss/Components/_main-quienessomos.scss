@@ -1,11 +1,12 @@
 main {
+
   /** ---- Quienes Somos ---- */
   .principal {
     padding: 35px;
 
     h1 {
       padding: 1.5rem;
-      font-size: 4rem;
+      font-size: 3rem;
       text-align: center;
     }
 
@@ -54,7 +55,6 @@ main {
   .sec-carousel {
     background: lavenderblush;
     padding: 10px;
-    margin-bottom: 50px;
 
     img {
       object-fit: cover;

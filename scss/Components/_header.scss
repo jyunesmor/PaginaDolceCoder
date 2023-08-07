@@ -40,7 +40,7 @@ header {
                      text-align: center;
 
                      &:hover {
-                        border-bottom: 3px solid black;
+                        border: 1px solid outset nth($paletacolores , 3);
                         padding-bottom: 2px;
                         color: aqua !important;
                      }

@@ -25,8 +25,9 @@ main {
          margin-top: 150px;
       }
 
-      h2 {
+      h1 {
          text-align: center;
+         font-size: 3rem;
 
          @include mobile {
             font-size: 2.75rem;
@@ -38,6 +39,7 @@ main {
          width: 100%;
          padding: 60px;
          @include flex(flex, space-around, center);
+         transition: 0.5s;
 
 
          @include tablets {
@@ -49,15 +51,19 @@ main {
          .card {
             width: 250px;
             height: 300px;
+            margin-top: 20px;
+            opacity: .7;
             position: relative;
             border-radius: 15px;
             background: linear-gradient(90deg, nth($paletacolores, 5) 0%, rgba(247, 161, 149, 1) 2%, rgba(255, 255, 255, 1) 100%);
+            transition: .5s ease-in;
+            transition-delay: .3s;
 
             @include tablets {
                row-gap: 2.5rem;
             }
 
-            h5 {
+            h2 {
                position: absolute;
                left: 0;
                bottom: 0;
@@ -76,11 +82,16 @@ main {
                   box-shadow: 3px 3px 25px black;
                }
             }
+
+            &:hover {
+               opacity: 1;
+               transform: scale(1.25);
+            }
          }
       }
    }
 
-   h2 {
+   h3 {
       text-align: center;
       margin: 0 auto 15px auto;
       font-size: 40px;
@@ -95,6 +106,10 @@ main {
       width: 98%;
       margin: auto;
 
+      .tit-gal {
+         margin-top: 150px;
+      }
+
       .galeria-productos {
          width: 95%;
          margin: 30px auto;
@@ -108,6 +123,7 @@ main {
             grid-auto-rows: 35rem;
             gap: 10px;
          }
+
          @include mobile600 {
             width: 95%;
             grid-template-columns: 2fr;
@@ -151,9 +167,9 @@ main {
             grid-column: span 2;
             grid-row: span 2;
 
-            @include mobile{
+            @include mobile {
                grid-column: span 1;
-               grid-row: span 1;      
+               grid-row: span 1;
             }
          }
 
@@ -170,10 +186,10 @@ main {
          .item-past-7 {
             grid-column: span 2;
             grid-row: span 2;
-            
-            @include mobile{
+
+            @include mobile {
                grid-column: span 1;
-               grid-row: span 1;      
+               grid-row: span 1;
             }
          }
 
@@ -183,8 +199,8 @@ main {
          .item-mesa-2 {
             grid-column: span 2;
 
-            
-            @include mobile{
+
+            @include mobile {
                grid-column: span 1;
             }
          }
@@ -194,9 +210,9 @@ main {
                grid-row: span 2;
             }
 
-            
-            @include mobile{
-               grid-row: span 1;      
+
+            @include mobile {
+               grid-row: span 1;
             }
          }
 
@@ -212,8 +228,8 @@ main {
             @include tablets {
                grid-column: span 3;
             }
-            
-            @include mobile{
+
+            @include mobile {
                grid-column: span 1;
                grid-row: span 1;
             }
@@ -222,15 +238,12 @@ main {
          .item-mesa-8 {
             grid-column: span 2;
 
-            @include mobile{
+            @include mobile {
                grid-column: span 1;
-   
+
             }
          }
 
-         .item-mesa-9 {
-
-         }
       }
    }
 }

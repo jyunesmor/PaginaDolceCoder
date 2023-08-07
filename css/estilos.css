@@ -26,9 +26,9 @@ html {
       font-size: 12px; } }
   html body {
     width: 100%;
-    min-height: 100vh;
-    background-color: #e6b7b8; }
+    min-height: 100vh; }
     html body main {
+      background-color: #e6b7b8;
       min-height: calc(100vh - 200px); }
       html body main .fij-whatapp {
         position: fixed;
@@ -67,7 +67,7 @@ header {
         margin: auto;
         text-align: center; }
         header nav div ul li a h6:hover {
-          border-bottom: 3px solid black;
+          border: 1px solid outset #f584a9ff;
           padding-bottom: 2px;
           color: aqua !important; }
 
@@ -142,31 +142,31 @@ main .cont-inicio div div img {
   main .cont-inicio {
     margin-top: 100px; } }
 
-main .container div .caja-prom {
-  width: 250px;
+main .container .caja-prom {
+  width: 350px;
   height: 200px; }
   @media screen and (max-width: 900px) {
-    main .container div .caja-prom {
+    main .container .caja-prom {
       height: 150px;
       margin: 50px auto; } }
   @media screen and (max-width: 750px) {
-    main .container div .caja-prom {
+    main .container .caja-prom {
       height: 150px;
       margin: 50px auto; } }
   @media screen and (max-width: 600px) {
-    main .container div .caja-prom {
+    main .container .caja-prom {
       width: 225px;
       height: 100px; }
-      main .container div .caja-prom h3 {
+      main .container .caja-prom h3 {
         height: 25rem; }
-      main .container div .caja-prom p {
+      main .container .caja-prom p {
         height: 16rem; } }
   @media screen and (max-width: 450px) {
-    main .container div .caja-prom {
+    main .container .caja-prom {
       margin: 40px auto; }
-      main .container div .caja-prom h3 {
+      main .container .caja-prom h3 {
         height: 14rem; }
-      main .container div .caja-prom p {
+      main .container .caja-prom p {
         height: 8rem; } }
 
 main .hero {
@@ -183,7 +183,8 @@ main .hero {
 
 main .title-cont {
   text-align: center;
-  font-size: 3.5rem;
+  margin: 40px auto;
+  font-size: 3rem;
   font-family: sans-serif;
   padding: 0.5rem; }
   @media screen and (max-width: 450px) {
@@ -269,7 +270,6 @@ main .ubicacion {
 
 main .contacto {
   width: 100%;
-  margin-bottom: 30px;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -367,13 +367,18 @@ main .contacto {
           padding-left: 40px;
           font-size: 1.35rem; } }
     main .contacto .datos-consulta button {
-      width: 50%;
+      width: 35%;
       margin: auto;
       margin-top: 1.5rem;
       font-size: 1rem;
       padding: 2%;
       border-radius: 8px;
-      box-shadow: 2px 2px 10px #dd5a60ff; }
+      background: none;
+      box-shadow: 2px 2px 10px #dd5a60ff;
+      transition: .6s ease; }
+      main .contacto .datos-consulta button:hover {
+        color: #dd5a60ff;
+        background-color: #edd9b5ff; }
       @media screen and (max-width: 750px) {
         main .contacto .datos-consulta button {
           width: 70%;
@@ -401,10 +406,11 @@ main {
     @media screen and (max-width: 450px) {
       main .productos {
         margin-top: 150px; } }
-    main .productos h2 {
-      text-align: center; }
+    main .productos h1 {
+      text-align: center;
+      font-size: 3rem; }
       @media screen and (max-width: 450px) {
-        main .productos h2 {
+        main .productos h1 {
           font-size: 2.75rem;
           text-align: center; } }
     main .productos .cards-productos {
@@ -412,7 +418,8 @@ main {
       padding: 60px;
       display: flex;
       justify-content: space-around;
-      align-items: center; }
+      align-items: center;
+      transition: 0.5s; }
       @media screen and (max-width: 750px) {
         main .productos .cards-productos {
           flex-wrap: wrap;
@@ -421,13 +428,17 @@ main {
       main .productos .cards-productos .card {
         width: 250px;
         height: 300px;
+        margin-top: 20px;
+        opacity: .7;
         position: relative;
         border-radius: 15px;
-        background: linear-gradient(90deg, #dd5a60ff 0%, #f7a195 2%, white 100%); }
+        background: linear-gradient(90deg, #dd5a60ff 0%, #f7a195 2%, white 100%);
+        transition: .5s ease-in;
+        transition-delay: .3s; }
         @media screen and (max-width: 750px) {
           main .productos .cards-productos .card {
             row-gap: 2.5rem; } }
-        main .productos .cards-productos .card h5 {
+        main .productos .cards-productos .card h2 {
           position: absolute;
           left: 0;
           bottom: 0;
@@ -441,16 +452,21 @@ main {
           height: 300px;
           border-radius: 15px;
           box-shadow: 3px 3px 25px black; }
-  main h2 {
+        main .productos .cards-productos .card:hover {
+          opacity: 1;
+          transform: scale(1.25); }
+  main h3 {
     text-align: center;
     margin: 0 auto 15px auto;
     font-size: 40px; }
     @media screen and (max-width: 450px) {
-      main h2 {
+      main h3 {
         font-size: 2.5rem; } }
   main .galeria {
     width: 98%;
     margin: auto; }
+    main .galeria .tit-gal {
+      margin-top: 150px; }
     main .galeria .galeria-productos {
       width: 95%;
       margin: 30px auto;
@@ -544,7 +560,7 @@ main {
     padding: 35px; }
     main .principal h1 {
       padding: 1.5rem;
-      font-size: 4rem;
+      font-size: 3rem;
       text-align: center; }
     main .principal p {
       font-size: 1.5rem;
@@ -578,8 +594,7 @@ main {
         margin-top: 110px; } }
   main .sec-carousel {
     background: lavenderblush;
-    padding: 10px;
-    margin-bottom: 50px; }
+    padding: 10px; }
     main .sec-carousel img {
       object-fit: cover;
       height: 450px; }

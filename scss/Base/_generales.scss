@@ -17,14 +17,17 @@ html {
   @include mobile600 {
     font-size: 12px;
   }
-  
+
   body {
     width: 100%;
     min-height: 100vh;
-    background-color: nth($paletacolores, 4);
 
     main {
+      background-color: nth($paletacolores, 4);
       min-height: calc(100vh - 200px);
+
+
+
       .fij-whatapp {
         position: fixed;
         bottom: 120px;
