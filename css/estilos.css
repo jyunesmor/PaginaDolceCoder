@@ -82,9 +82,6 @@ main .contenedor-index {
   background-attachment: fixed;
   display: flex;
   flex-direction: column; }
-  @media screen and (max-width: 750px) {
-    main .contenedor-index .row {
-      margin-top: 50px; } }
   main .contenedor-index .row .img img {
     display: flex;
     justify-content: start;

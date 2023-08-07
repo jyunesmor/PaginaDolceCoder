@@ -14,10 +14,6 @@ main {
 
       .row {
 
-         @include tablets {
-            margin-top: 50px;
-         }
-
          .img {
 
             img {
