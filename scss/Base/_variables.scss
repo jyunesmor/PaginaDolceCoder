@@ -4,35 +4,45 @@
 
 /* Variables Tipo de Colores */
 
-$paletacolores:
-#edd9b5ff, /*$dutch-white*/
-#f9f3ecff, /*$isabelline*/
-#f584a9ff, /*tickle-me-pink*/
-#e6b7b8, /*-tea-rose-red*/
-#dd5a60ff; /*indian-red*/
+$paletacolores: #edd9b5ff,
+      /*$dutch-white*/
+      #f9f3ecff,
+      /*$isabelline*/
+      #f584a9ff,
+      /*tickle-me-pink*/
+      #e6b7b8,
+      /*-tea-rose-red*/
+      #FAE5E6;
+
 
 /* Variables Tipo de Fuente */
 
-$fuentes:
-"Brittany Signature", sans-serif, /*Brittany-font:*/
-"Montserrat", sans-serif, /*montserrat-font:*/
-"Comforter", cursive, /*Comforter-font*/ 
-"Corinthia", cursive, /*Corinthia-font*/ 
-"Ruthie", cursive, /*Ruthie-font Uso Logo*/ 
-"Waterfall", cursive, /*Waterfall-font*/
-"WindSong", cursive; /*WindSong-font*/ 
+$fuentes: "Brittany Signature", sans-serif,
+      /*Brittany-font:*/
+      "Montserrat", sans-serif,
+      /*montserrat-font:*/
+      "Comforter", cursive,
+      /*Comforter-font*/
+      "Corinthia", cursive,
+      /*Corinthia-font*/
+      "Ruthie", cursive,
+      /*Ruthie-font Uso Logo*/
+      "Waterfall", cursive,
+      /*Waterfall-font*/
+      "WindSong", cursive;
+/*WindSong-font*/
 
 
 
 /* ----- Mixins ----- */
 
-@mixin flex ($display,$justify,$align){
+@mixin flex ($display, $justify, $align) {
       display: $display;
       justify-content: $justify;
       align-items: $align;
 }
 
-@mixin flexColumn ($display,$direction,$justify,$align){
+@mixin flexColumn ($display, $direction, $justify, $align) {
       display: $display;
       flex-direction: $direction;
       justify-content: $justify;

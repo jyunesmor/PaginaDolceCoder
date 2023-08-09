@@ -13,16 +13,16 @@ header {
             width: 200px;
 
             img {
-               width: 200px;
-               height: 125px;
+               width: 236px;
+               height: 110px;
 
                @include mobile {
                   width: 125px;
                   height: 78px;
                }
-
             }
          }
+
       }
 
       div {
@@ -42,7 +42,7 @@ header {
                      &:hover {
                         border: 1px solid outset nth($paletacolores , 3);
                         padding-bottom: 2px;
-                        color: aqua !important;
+                        color: #DD5A60 !important;
                      }
                   }
 

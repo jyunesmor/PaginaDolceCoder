@@ -18,46 +18,48 @@ footer {
 
    .text-boot {
       width: 30%;
+
       a {
          img {
-            width: 150px;
+            width: 190px;
             height: 94px;
          }
       }
    }
 
-   .redes-copy{
+   .redes-copy {
       width: 70%;
+
       @include tablets {
          width: 95%;
-         @include flex(flex,space-evenly,center);
+         @include flex(flex, space-evenly, center);
       }
 
       @include mobile {
          width: 95%;
-         @include flexColumn (flex,column,center,center);
+         @include flexColumn (flex, column, center, center);
       }
 
-   .redes-boot {
-      a {
+      .redes-boot {
+         a {
+            img {
+               width: 30px;
+               height: 30px;
+            }
+         }
+      }
+
+      .copy-boot {
          img {
             width: 30px;
             height: 30px;
          }
-      }
-   }
 
-   .copy-boot {
-      img {
-         width: 30px;
-         height: 30px;
+         h3 {
+            font-family: nth($fuentes, 2);
+            font-size: 1rem;
+         }
       }
-
-      h3 {
-         font-family: nth($fuentes, 2);
-         font-size: 1rem;
-      }
-   }
 
    }
 
