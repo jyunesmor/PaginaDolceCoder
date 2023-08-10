@@ -10,11 +10,11 @@ header {
    nav {
       .container {
          a {
-            width: 200px;
+            width: 250px;
 
             img {
-               width: 236px;
-               height: 110px;
+               width: 250px;
+               height: 124px;
 
                @include mobile {
                   width: 125px;
@@ -28,13 +28,13 @@ header {
       div {
          ul {
             li {
-               font-size: 1.15rem;
-               width: 200px;
+               font-size: .45rem;
+               width: 240px;
 
                a {
-                  display: inline-flex;
+                  display: block;
 
-                  h6 {
+                  h4 {
                      width: fit-content;
                      margin: auto;
                      text-align: center;
