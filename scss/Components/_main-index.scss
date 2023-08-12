@@ -62,9 +62,7 @@ main {
                }
             }
 
-            @include mobile {
-               @include flex(flex, center, center);
-            }
+            @include mobile {}
          }
       }
    }

@@ -48,3 +48,12 @@ $fuentes: "Brittany Signature", sans-serif,
       justify-content: $justify;
       align-items: $align;
 }
+
+
+/* ----- Extends ----- */
+
+%flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}

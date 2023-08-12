@@ -33,12 +33,24 @@ main {
    }
 
    .container {
+      padding-bottom: 50px;
+
       .caja-prom {
          width: 300px;
          height: 200px;
          border: 1px solid black;
 
-         h3 {
+         @include notebook {
+            margin: 5px 5px;
+         }
+
+         @include tablets {
+            width: 250px;
+            height: 167px;
+            margin: 10px 10px;
+         }
+
+         h2 {
             font-size: 2rem;
          }
 
@@ -46,24 +58,6 @@ main {
             font-size: 1rem;
          }
 
-         @include notebook {
-            height: auto;
-            margin: 50px auto;
-         }
-
-         @include tablets {
-            height: auto;
-            margin: 50px auto;
-         }
-
-         @include mobile600 {
-            height: auto;
-         }
-
-         @include mobile {
-            height: auto;
-            padding: 40px;
-         }
       }
    }
 

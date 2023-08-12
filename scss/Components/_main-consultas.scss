@@ -27,10 +27,11 @@ main {
    }
 
    .ubicacion {
-      width: 100%;
+      width: 90%;
       height: auto;
       display: flex;
-      justify-content: center;
+      margin: auto;
+      padding: 15px;
 
       @include notebook {
          width: 100%;
@@ -48,11 +49,12 @@ main {
 
       .mapa {
          width: 50%;
-         @include flex(flex, center, center);
-         border-radius: 10px;
+         padding: 30px;
+         @extend %flex;
+
 
          @include notebook {
-            width: 100%;
+            width: 50%;
          }
 
          @include tablets {
@@ -67,10 +69,11 @@ main {
 
       .info-contacto {
          width: 50%;
+         padding: 30px;
          @include flexColumn(flex, column, space-evenly, start);
 
          @include notebook {
-            width: 100%;
+            width: 50%;
             height: auto;
          }
 
@@ -97,17 +100,28 @@ main {
          .info-contacto-dato {
             display: flex;
             width: 100%;
-            padding-left: 50px;
+            padding-left: 30px;
             gap: 35px;
 
             @include notebook {
                width: 95%;
+               padding-left: 5px;
                display: flex;
             }
 
             @include tablets {
                width: 100%;
+               padding-left: 50px;
                margin-bottom: 25px;
+            }
+
+            @include mobile600 {
+               padding-left: 10px;
+            }
+
+            @include mobile {
+               padding-left: 15px;
+               gap: 15px;
             }
 
             img {
@@ -115,12 +129,9 @@ main {
                height: 35px;
             }
 
-            h4 {
-               font-size: 1.25rem;
+            h2 {
+               font-size: 1.3rem;
 
-               @include notebook {
-                  font-size: 1.1rem;
-               }
             }
          }
       }
@@ -128,30 +139,31 @@ main {
 
    .contacto {
       width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @extend %flex;
+      margin: auto;
 
-      @include notebook {
-         width: 100%;
-      }
-
-      @include tablets {
-         flex-direction: column;
-         height: auto;
-      }
-
-      @include mobile600 {
-         height: auto;
-      }
-
-      @include mobile {
-         height: auto;
-         width: 100%;
-      }
 
       form {
-         width: 80%;
+         width: 90%;
+         padding: 15px;
+
+         @include notebook {
+            width: 100%;
+         }
+
+         @include tablets {
+            flex-direction: column;
+            height: auto;
+         }
+
+         @include mobile600 {
+            height: auto;
+         }
+
+         @include mobile {
+            height: auto;
+            width: 100%;
+         }
 
          .datos-personales {
             width: 50%;
@@ -173,6 +185,12 @@ main {
                display: flex;
                flex-direction: column;
 
+               @include tablets {
+                  width: 100%;
+                  margin: auto;
+                  margin-top: 25px;
+               }
+
 
                input {
                   width: 100%;
@@ -187,6 +205,7 @@ main {
 
                   @include tablets {
                      width: 85%;
+                     margin: auto;
                   }
 
                   &input[type="number"] {
@@ -211,6 +230,7 @@ main {
 
                   @include tablets {
                      width: 85%;
+                     margin: auto;
                      padding-left: 0;
                      font-size: 1.35rem;
                   }
@@ -261,7 +281,6 @@ main {
 
                @include tablets {
                   width: 85%;
-                  padding-left: 40px;
                   font-size: 1.35rem;
                }
             }
