@@ -57,3 +57,9 @@ $fuentes: "Brittany Signature", sans-serif,
       justify-content: center;
       align-items: center;
 }
+
+%border-card {
+      border: 1px solid black;
+      border-radius: 20px;
+      box-shadow: 3px 3px 12px 6px black;
+}

@@ -1,43 +1,36 @@
 main {
-   .hero {
-      width: 100%;
-      max-height: calc(50vh - 150px);
-      background-image: url(../img/Postrefrutilla.jpg);
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-      background-attachment: fixed;
-
-      @include mobile {
-         display: none;
-      }
-   }
-
    .productos {
       width: 100%;
       margin: 60px auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
       @include tablets {
          height: auto;
       }
 
       @include mobile {
-         margin-top: 150px;
+         margin-top: 100px;
       }
 
-      h1 {
+      .title-mob {
          text-align: center;
          font-size: 3rem;
+         display: none;
 
          @include mobile {
+            padding: 20px;
             font-size: 2.75rem;
             text-align: center;
+            background-color: lightcoral;
+            display: inline-block;
          }
       }
 
       .cards-productos {
          width: 100%;
-         padding: 60px;
+         padding: 30px;
          @include flex(flex, space-around, center);
          transition: 0.5s;
 
@@ -195,8 +188,6 @@ main {
                grid-row: span 1;
             }
          }
-
-         .item-past-9 {}
 
          /* Galeria Mesa */
          .item-mesa-2 {

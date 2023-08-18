@@ -26,6 +26,45 @@ html {
       background-color: nth($paletacolores, 4);
       min-height: calc(100vh - 200px);
 
+      .hero {
+        width: 100%;
+        max-height: calc(75vh - 150px);
+        background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 10%, rgba(0, 0, 0, 0.7) 80%), url(../img/Postrefrutilla.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-attachment: fixed;
+
+        @include mobile {
+          display: none;
+        }
+
+        .text-inicio {
+          width: 100%;
+          height: 100%;
+          display: inline-flex;
+
+          h1 {
+            text-align: center;
+            color: white;
+            font-size: 5rem;
+            padding: 15px;
+            margin: auto;
+            margin-top: 220px;
+            border: 1px solid white;
+            outline: 1px solid white;
+            outline-offset: 10px;
+
+            @include mobile600 {
+              width: 85%;
+              font-size: 3rem;
+            }
+
+          }
+        }
+
+      }
+
 
 
       .fij-whatapp {
