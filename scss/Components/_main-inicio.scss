@@ -1,22 +1,6 @@
 main {
-   .contenedor-hero {
-      width: 100%;
-
-      .hero {
-         background-image: url(../img/Postrefrutilla.jpg);
-         background-repeat: no-repeat;
-         background-position: center center;
-         background-size: cover;
-         background-attachment: fixed;
-      }
-
-      @include mobile {
-         display: none;
-      }
-   }
 
    .cont-inicio {
-
       div {
          div {
             img {
@@ -28,6 +12,20 @@ main {
 
       @include mobile {
          margin-top: 100px;
+      }
+
+      .title-mob {
+         display: none;
+         padding: 15px;
+
+         h1 {
+            padding: 30px;
+            text-align: center;
+         }
+
+         @include mobile {
+            display: contents;
+         }
       }
 
    }

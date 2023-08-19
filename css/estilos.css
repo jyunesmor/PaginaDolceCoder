@@ -37,7 +37,7 @@ html {
       min-height: calc(100vh - 200px); }
       html body main .hero {
         width: 100%;
-        max-height: calc(75vh - 150px);
+        height: 90vh;
         background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 10%, rgba(0, 0, 0, 0.7) 80%), url(../img/Postrefrutilla.jpg);
         background-repeat: no-repeat;
         background-position: center center;
@@ -52,17 +52,22 @@ html {
           display: inline-flex; }
           html body main .hero .text-inicio h1 {
             text-align: center;
-            color: white;
+            color: #e6b7b8;
             font-size: 5rem;
             padding: 15px;
             margin: auto;
-            margin-top: 220px;
+            margin-top: 250px;
             border: 1px solid white;
             outline: 1px solid white;
-            outline-offset: 10px; }
+            outline-offset: 10px;
+            background: rgba(245, 132, 169, 0.25);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(0px);
+            -webkit-backdrop-filter: blur(0px); }
             @media screen and (max-width: 600px) {
               html body main .hero .text-inicio h1 {
-                width: 85%;
+                width: 90%;
                 font-size: 3rem; } }
       html body main .fij-whatapp {
         position: fixed;
@@ -151,18 +156,6 @@ main .contenedor-index {
         font-size: 1.95rem;
         filter: drop-shadow(4px 4px 1px black); }
 
-main .contenedor-hero {
-  width: 100%; }
-  main .contenedor-hero .hero {
-    background-image: url(../img/Postrefrutilla.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed; }
-  @media screen and (max-width: 450px) {
-    main .contenedor-hero {
-      display: none; } }
-
 main .cont-inicio div div img {
   width: 250px;
   height: 250px; }
@@ -170,6 +163,16 @@ main .cont-inicio div div img {
 @media screen and (max-width: 450px) {
   main .cont-inicio {
     margin-top: 100px; } }
+
+main .cont-inicio .title-mob {
+  display: none;
+  padding: 15px; }
+  main .cont-inicio .title-mob h1 {
+    padding: 30px;
+    text-align: center; }
+  @media screen and (max-width: 450px) {
+    main .cont-inicio .title-mob {
+      display: contents; } }
 
 main .container {
   padding-bottom: 50px; }
@@ -190,27 +193,15 @@ main .container {
     main .container .caja-prom p {
       font-size: 1rem; }
 
-main .hero {
-  width: 100%;
-  min-height: 75vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/Postrefrutilla.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed; }
-  @media screen and (max-width: 750px) {
-    main .hero {
-      height: auto; } }
-
-main .title-cont {
-  text-align: center;
-  margin: 40px auto;
-  font-size: 3rem;
-  font-family: sans-serif;
-  padding: 0.5rem; }
+main .principal .title-mob {
+  display: none;
+  padding: 15px; }
+  main .principal .title-mob h1 {
+    padding: 30px;
+    text-align: center; }
   @media screen and (max-width: 450px) {
-    main .title-cont {
-      margin-top: 100px; } }
+    main .principal .title-mob {
+      display: contents; } }
 
 main .ubicacion {
   width: 90%;
@@ -427,7 +418,7 @@ main {
   /* Galeria Grid Productos */ }
   main .productos {
     width: 100%;
-    margin: 60px auto;
+    margin: 10px auto;
     display: flex;
     flex-direction: column;
     justify-content: center; }
@@ -438,16 +429,14 @@ main {
       main .productos {
         margin-top: 100px; } }
     main .productos .title-mob {
-      text-align: center;
-      font-size: 3rem;
-      display: none; }
+      display: none;
+      padding: 15px; }
+      main .productos .title-mob h1 {
+        padding: 30px;
+        text-align: center; }
       @media screen and (max-width: 450px) {
         main .productos .title-mob {
-          padding: 20px;
-          font-size: 2.75rem;
-          text-align: center;
-          background-color: lightcoral;
-          display: inline-block; } }
+          display: contents; } }
     main .productos .cards-productos {
       width: 100%;
       padding: 30px;
@@ -498,11 +487,16 @@ main {
       main h3 {
         font-size: 2.5rem; } }
   main .galeria {
-    width: 70%;
+    width: 85%;
     margin: auto;
     background: #fff .6; }
     main .galeria .tit-gal {
       margin-top: 150px; }
+    main .galeria .cont-gal {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
     main .galeria .galeria-productos {
       width: 95%;
       padding: 50px;
@@ -593,11 +587,14 @@ main {
 main {
   /** ---- Quienes Somos ---- */ }
   main .principal {
-    padding: 35px; }
-    main .principal h1 {
-      padding: 1.5rem;
-      font-size: 3rem;
-      text-align: center; }
+    padding: 15px; }
+    main .principal .title-mob {
+      display: none;
+      text-align: center;
+      padding: 15px; }
+      @media screen and (max-width: 450px) {
+        main .principal .title-mob {
+          display: contents; } }
     main .principal p {
       font-size: 1.5rem;
       text-indent: 2rem;

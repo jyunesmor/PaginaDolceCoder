@@ -1,7 +1,7 @@
 main {
    .productos {
       width: 100%;
-      margin: 60px auto;
+      margin: 10px auto;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -15,16 +15,16 @@ main {
       }
 
       .title-mob {
-         text-align: center;
-         font-size: 3rem;
          display: none;
+         padding: 15px;
+
+         h1 {
+            padding: 30px;
+            text-align: center;
+         }
 
          @include mobile {
-            padding: 20px;
-            font-size: 2.75rem;
-            text-align: center;
-            background-color: lightcoral;
-            display: inline-block;
+            display: contents;
          }
       }
 
@@ -96,14 +96,17 @@ main {
 
    /* Galeria Grid Productos */
    .galeria {
-      width: 70%;
+      width: 85%;
       margin: auto;
       background: #fff .6;
 
-
-
       .tit-gal {
          margin-top: 150px;
+      }
+
+      .cont-gal {
+         @include flexColumn(flex, column, center, center);
+
       }
 
       .galeria-productos {
@@ -138,8 +141,6 @@ main {
             box-shadow: 8px 8px 25px black;
             min-width: 100px;
             height: auto;
-
-
 
             img {
                width: 100%;
