@@ -87,16 +87,15 @@ html {
       }
 
       .principal {
-        height: auto;
-        margin-top: 100px;
+        margin-top: 75px;
         padding: 30px;
-        font-size: 3rem;
         text-align: center;
         @extend %flex;
 
         .title-mob {
           margin: auto;
           display: none;
+          font-size: 4rem;
 
           @include mobile {
             display: contents;
