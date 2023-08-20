@@ -34,13 +34,13 @@ header {
                a {
                   display: block;
 
-                  h4 {
+                  h3 {
                      width: fit-content;
                      margin: auto;
                      text-align: center;
+                     font-size: 1.25rem;
 
                      &:hover {
-                        border: 1px solid outset nth($paletacolores , 3);
                         padding-bottom: 2px;
                         color: #DD5A60 !important;
                      }

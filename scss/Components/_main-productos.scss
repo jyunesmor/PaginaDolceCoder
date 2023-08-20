@@ -42,9 +42,9 @@ main {
          }
 
          .card {
-            width: 250px;
+            min-width: 250px;
             height: 300px;
-            margin-top: 20px;
+            margin-top: 10px;
             opacity: .7;
             position: relative;
             border-radius: 15px;
@@ -52,8 +52,9 @@ main {
             transition: .5s ease-in;
             transition-delay: .3s;
 
-            @include tablets {
-               row-gap: 2.5rem;
+            @include notebook {
+               row-gap: 2rem;
+               column-gap: 2rem;
             }
 
             h2 {
@@ -96,7 +97,7 @@ main {
 
    /* Galeria Grid Productos */
    .galeria {
-      width: 85%;
+      width: 95%;
       margin: auto;
       background: #fff .6;
 
@@ -117,7 +118,7 @@ main {
          grid-auto-rows: 250px;
          gap: 25px;
 
-         @include tablets {
+         @include notebook {
             width: 95%;
             grid-template-columns: repeat(2, 1fr);
          }
@@ -149,7 +150,7 @@ main {
          /* Galeria Chocolateria */
 
          .item-choco-1 {
-            @include tablets {
+            @include notebook {
                display: none;
             }
          }
@@ -173,6 +174,8 @@ main {
                grid-column: span 1;
             }
          }
+
+         .item-choco-7 {}
 
          .item-choco-9 {
             grid-column: span 2;

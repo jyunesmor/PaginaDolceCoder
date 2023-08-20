@@ -113,12 +113,12 @@ header {
     width: 240px; }
     header nav div ul li a {
       display: block; }
-      header nav div ul li a h4 {
+      header nav div ul li a h3 {
         width: fit-content;
         margin: auto;
-        text-align: center; }
-        header nav div ul li a h4:hover {
-          border: 1px solid outset #f584a9ff;
+        text-align: center;
+        font-size: 1.25rem; }
+        header nav div ul li a h3:hover {
           padding-bottom: 2px;
           color: #DD5A60 !important; }
 
@@ -176,16 +176,6 @@ main .cont-inicio div div img {
   main .cont-inicio {
     margin-top: 100px; } }
 
-main .cont-inicio .title-mob {
-  display: none;
-  padding: 15px; }
-  main .cont-inicio .title-mob h1 {
-    padding: 30px;
-    text-align: center; }
-  @media screen and (max-width: 450px) {
-    main .cont-inicio .title-mob {
-      display: contents; } }
-
 main .container {
   padding-bottom: 50px; }
   main .container .caja-prom {
@@ -200,7 +190,7 @@ main .container {
         width: 250px;
         height: 167px;
         margin: 10px 10px; } }
-    main .container .caja-prom h2 {
+    main .container .caja-prom h3 {
       font-size: 2rem; }
     main .container .caja-prom p {
       font-size: 1rem; }
@@ -461,18 +451,19 @@ main {
           gap: 2.5rem;
           height: auto; } }
       main .productos .cards-productos .card {
-        width: 250px;
+        min-width: 250px;
         height: 300px;
-        margin-top: 20px;
+        margin-top: 10px;
         opacity: .7;
         position: relative;
         border-radius: 15px;
         background: linear-gradient(90deg, #FAE5E6 0%, #f7a195 2%, white 100%);
         transition: .5s ease-in;
         transition-delay: .3s; }
-        @media screen and (max-width: 750px) {
+        @media screen and (max-width: 900px) {
           main .productos .cards-productos .card {
-            row-gap: 2.5rem; } }
+            row-gap: 2rem;
+            column-gap: 2rem; } }
         main .productos .cards-productos .card h2 {
           position: absolute;
           left: 0;
@@ -498,7 +489,7 @@ main {
       main h3 {
         font-size: 2.5rem; } }
   main .galeria {
-    width: 85%;
+    width: 95%;
     margin: auto;
     background: #fff .6; }
     main .galeria .tit-gal {
@@ -518,7 +509,7 @@ main {
       /* Galeria Chocolateria */
       /* Galeria Pasteleria */
       /* Galeria Mesa */ }
-      @media screen and (max-width: 750px) {
+      @media screen and (max-width: 900px) {
         main .galeria .galeria-productos {
           width: 95%;
           grid-template-columns: repeat(2, 1fr); } }
@@ -538,7 +529,7 @@ main {
           height: 100%;
           border-radius: 10px;
           object-fit: cover; }
-      @media screen and (max-width: 750px) {
+      @media screen and (max-width: 900px) {
         main .galeria .galeria-productos .item-choco-1 {
           display: none; } }
       main .galeria .galeria-productos .item-choco-2 {
