@@ -166,7 +166,7 @@ main {
          }
 
          .item-choco-5 {
-            @include tablets {
+            @include notebook {
                grid-column: span 2;
             }
 
@@ -175,7 +175,7 @@ main {
             }
          }
 
-         .item-choco-7 {}
+
 
          .item-choco-9 {
             grid-column: span 2;
