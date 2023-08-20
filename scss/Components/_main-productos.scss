@@ -1,7 +1,7 @@
 main {
    .productos {
       width: 100%;
-      margin: 10px auto;
+      margin: auto;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -113,27 +113,21 @@ main {
          width: 95%;
          padding: 50px;
          display: grid;
-         grid-template-columns: repeat(4, 1fr);
-         grid-auto-rows: 200px;
+         grid-template-columns: repeat(3, 1fr);
+         grid-auto-rows: 250px;
          gap: 25px;
 
          @include tablets {
-            grid-template-columns: repeat(3, 1fr);
-            grid-auto-rows: 35rem;
-            gap: 10px;
+            width: 95%;
+            grid-template-columns: repeat(2, 1fr);
          }
 
          @include mobile600 {
             width: 95%;
-            grid-template-columns: 2fr;
-            grid-auto-rows: 18rem;
+            grid-template-columns: 1fr;
+            grid-auto-rows: 25rem;
          }
 
-         @include mobile {
-            width: 85%;
-            grid-template-columns: 1fr;
-            grid-auto-rows: 18rem;
-         }
 
          .gal-item {
             border: 1px black solid;
@@ -155,7 +149,7 @@ main {
          /* Galeria Chocolateria */
 
          .item-choco-1 {
-            @include mobile600 {
+            @include tablets {
                display: none;
             }
          }
@@ -164,9 +158,19 @@ main {
             grid-column: span 2;
             grid-row: span 2;
 
-            @include mobile {
+            @include mobile600 {
                grid-column: span 1;
                grid-row: span 1;
+            }
+         }
+
+         .item-choco-5 {
+            @include tablets {
+               grid-column: span 2;
+            }
+
+            @include mobile600 {
+               grid-column: span 1;
             }
          }
 
@@ -184,58 +188,27 @@ main {
             grid-column: span 2;
             grid-row: span 2;
 
-            @include mobile {
+            @include mobile600 {
                grid-column: span 1;
                grid-row: span 1;
             }
          }
 
          /* Galeria Mesa */
-         .item-mesa-2 {
-            grid-column: span 2;
-
-
-            @include mobile {
-               grid-column: span 1;
-            }
-         }
 
          .item-mesa-3 {
-            @include tablets {
-               grid-row: span 2;
-            }
+            grid-row: span 2;
 
-
-            @include mobile {
+            @include mobile600 {
                grid-row: span 1;
-            }
-         }
-
-         .item-mesa-6 {
-            @include tablets {
-               display: none;
             }
          }
 
          .item-mesa-7 {
             grid-row: span 2;
 
-            @include tablets {
-               grid-column: span 3;
-            }
-
-            @include mobile {
-               grid-column: span 1;
+            @include mobile600 {
                grid-row: span 1;
-            }
-         }
-
-         .item-mesa-8 {
-            grid-column: span 2;
-
-            @include mobile {
-               grid-column: span 1;
-
             }
          }
 

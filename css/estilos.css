@@ -5,7 +5,7 @@
 /*WindSong-font*/
 /* ----- Mixins ----- */
 /* ----- Extends ----- */
-main .ubicacion .mapa, main .contacto {
+html body main .principal, main .principal, main .ubicacion .mapa, main .contacto {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -67,7 +67,7 @@ html {
             -webkit-backdrop-filter: blur(0px); }
             @media screen and (max-width: 600px) {
               html body main .hero .text-inicio h1 {
-                width: 90%;
+                width: 65%;
                 font-size: 3rem; } }
       html body main .fij-whatapp {
         position: fixed;
@@ -78,6 +78,18 @@ html {
         @media screen and (max-width: 450px) {
           html body main .fij-whatapp {
             display: none; } }
+      html body main .principal {
+        height: auto;
+        margin-top: 100px;
+        padding: 30px;
+        font-size: 3rem;
+        text-align: center; }
+        html body main .principal .title-mob {
+          margin: auto;
+          display: none; }
+          @media screen and (max-width: 450px) {
+            html body main .principal .title-mob {
+              display: contents; } }
 
 header {
   background-color: #FAE5E6;
@@ -194,11 +206,10 @@ main .container {
       font-size: 1rem; }
 
 main .principal .title-mob {
+  margin: auto;
   display: none;
-  padding: 15px; }
-  main .principal .title-mob h1 {
-    padding: 30px;
-    text-align: center; }
+  padding: 15px;
+  font-size: 3rem; }
   @media screen and (max-width: 450px) {
     main .principal .title-mob {
       display: contents; } }
@@ -418,7 +429,7 @@ main {
   /* Galeria Grid Productos */ }
   main .productos {
     width: 100%;
-    margin: 10px auto;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center; }
@@ -501,27 +512,21 @@ main {
       width: 95%;
       padding: 50px;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-auto-rows: 200px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 250px;
       gap: 25px;
       /* Galeria Chocolateria */
       /* Galeria Pasteleria */
       /* Galeria Mesa */ }
       @media screen and (max-width: 750px) {
         main .galeria .galeria-productos {
-          grid-template-columns: repeat(3, 1fr);
-          grid-auto-rows: 35rem;
-          gap: 10px; } }
+          width: 95%;
+          grid-template-columns: repeat(2, 1fr); } }
       @media screen and (max-width: 600px) {
         main .galeria .galeria-productos {
           width: 95%;
-          grid-template-columns: 2fr;
-          grid-auto-rows: 18rem; } }
-      @media screen and (max-width: 450px) {
-        main .galeria .galeria-productos {
-          width: 85%;
           grid-template-columns: 1fr;
-          grid-auto-rows: 18rem; } }
+          grid-auto-rows: 25rem; } }
       main .galeria .galeria-productos .gal-item {
         border: 1px black solid;
         border-radius: 10px;
@@ -533,16 +538,22 @@ main {
           height: 100%;
           border-radius: 10px;
           object-fit: cover; }
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 750px) {
         main .galeria .galeria-productos .item-choco-1 {
           display: none; } }
       main .galeria .galeria-productos .item-choco-2 {
         grid-column: span 2;
         grid-row: span 2; }
-        @media screen and (max-width: 450px) {
+        @media screen and (max-width: 600px) {
           main .galeria .galeria-productos .item-choco-2 {
             grid-column: span 1;
             grid-row: span 1; } }
+      @media screen and (max-width: 750px) {
+        main .galeria .galeria-productos .item-choco-5 {
+          grid-column: span 2; } }
+      @media screen and (max-width: 600px) {
+        main .galeria .galeria-productos .item-choco-5 {
+          grid-column: span 1; } }
       main .galeria .galeria-productos .item-choco-9 {
         grid-column: span 2; }
         @media screen and (max-width: 600px) {
@@ -551,86 +562,55 @@ main {
       main .galeria .galeria-productos .item-past-7 {
         grid-column: span 2;
         grid-row: span 2; }
-        @media screen and (max-width: 450px) {
+        @media screen and (max-width: 600px) {
           main .galeria .galeria-productos .item-past-7 {
             grid-column: span 1;
             grid-row: span 1; } }
-      main .galeria .galeria-productos .item-mesa-2 {
-        grid-column: span 2; }
-        @media screen and (max-width: 450px) {
-          main .galeria .galeria-productos .item-mesa-2 {
-            grid-column: span 1; } }
-      @media screen and (max-width: 750px) {
-        main .galeria .galeria-productos .item-mesa-3 {
-          grid-row: span 2; } }
-      @media screen and (max-width: 450px) {
-        main .galeria .galeria-productos .item-mesa-3 {
-          grid-row: span 1; } }
-      @media screen and (max-width: 750px) {
-        main .galeria .galeria-productos .item-mesa-6 {
-          display: none; } }
+      main .galeria .galeria-productos .item-mesa-3 {
+        grid-row: span 2; }
+        @media screen and (max-width: 600px) {
+          main .galeria .galeria-productos .item-mesa-3 {
+            grid-row: span 1; } }
       main .galeria .galeria-productos .item-mesa-7 {
         grid-row: span 2; }
-        @media screen and (max-width: 750px) {
-          main .galeria .galeria-productos .item-mesa-7 {
-            grid-column: span 3; } }
-        @media screen and (max-width: 450px) {
-          main .galeria .galeria-productos .item-mesa-7 {
-            grid-column: span 1;
-            grid-row: span 1; } }
-      main .galeria .galeria-productos .item-mesa-8 {
-        grid-column: span 2; }
-        @media screen and (max-width: 450px) {
-          main .galeria .galeria-productos .item-mesa-8 {
-            grid-column: span 1; } }
-
-main {
-  /** ---- Quienes Somos ---- */ }
-  main .principal {
-    padding: 15px; }
-    main .principal .title-mob {
-      display: none;
-      text-align: center;
-      padding: 15px; }
-      @media screen and (max-width: 450px) {
-        main .principal .title-mob {
-          display: contents; } }
-    main .principal p {
-      font-size: 1.5rem;
-      text-indent: 2rem;
-      padding: 2rem; }
-      @media screen and (max-width: 450px) {
-        main .principal p {
-          text-align: justify; } }
-      main .principal p .text {
-        font-size: 1.75rem; }
-      main .principal p span {
-        font-family: "Comforter";
-        font-size: 4rem; }
-        @media screen and (max-width: 450px) {
-          main .principal p span {
-            display: block;
-            text-align: center;
-            padding-right: 35px; } }
         @media screen and (max-width: 600px) {
-          main .principal p span {
-            display: block;
-            text-align: center;
-            padding-right: 35px; } }
-        @media screen and (max-width: 750px) {
-          main .principal p span {
-            display: block;
-            text-align: center;
-            padding-right: 35px; } }
+          main .galeria .galeria-productos .item-mesa-7 {
+            grid-row: span 1; } }
+
+main .cont-quienessomos {
+  padding: 5px; }
+  main .cont-quienessomos p {
+    font-size: 1.5rem;
+    text-indent: 2rem;
+    padding: 2rem; }
     @media screen and (max-width: 450px) {
-      main .principal {
-        margin-top: 100px; } }
-  main .sec-carousel {
-    background: lavenderblush;
-    padding: 10px; }
-    main .sec-carousel img {
-      object-fit: cover;
-      height: 450px; }
+      main .cont-quienessomos p {
+        text-align: justify; } }
+    main .cont-quienessomos p .text {
+      font-size: 1.75rem; }
+  main .cont-quienessomos span {
+    font-family: "Comforter";
+    font-size: 4rem;
+    padding-left: 60px; }
+    @media screen and (max-width: 750px) {
+      main .cont-quienessomos span {
+        display: block;
+        text-align: center;
+        padding-left: 5px;
+        font-size: 3.5rem; } }
+    @media screen and (max-width: 600px) {
+      main .cont-quienessomos span {
+        font-size: 3.2rem; } }
+  @media screen and (max-width: 450px) {
+    main .cont-quienessomos {
+      margin-top: 100px; } }
+
+main .sec-carousel {
+  background: lavenderblush;
+  padding: 10px; }
+  main .sec-carousel img {
+    object-fit: cover;
+    height: 450px; }
 
 footer {
   background-color: #FAE5E6;

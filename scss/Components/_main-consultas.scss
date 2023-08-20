@@ -1,18 +1,18 @@
 main {
 
    .principal {
+      @extend %flex;
+
       .title-mob {
+         margin: auto;
          display: none;
          padding: 15px;
-
-         h1 {
-            padding: 30px;
-            text-align: center;
-         }
+         font-size: 3rem;
 
          @include mobile {
             display: contents;
          }
+
       }
    }
 
